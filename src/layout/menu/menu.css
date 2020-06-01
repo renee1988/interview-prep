@@ -1,0 +1,38 @@
+.menu-container {
+    text-align: right;
+    background-color: rgb(99,154,103, 0.8);
+    color: rgb(43,88,12);
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.menu-item-container {
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.menu-item-container:hover,
+.menu-item-container.expanded {
+    background-color: rgb(43,88,12, 0.8);
+    color: white;
+}
+
+.menu-item-display-name {
+    line-height: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 25px;
+}
+
+.menu-item-display-name .selected-arrow {
+    font-size: 18px;
+}
+
+.sub-menu-container {
+    padding-right: 25px;
+}
+
+.sub-menu-item {
+    padding: 0.25rem 0;
+}
