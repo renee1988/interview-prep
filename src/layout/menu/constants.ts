@@ -56,27 +56,27 @@ const webPerfMenu: Array<MenuConfig> = [
 export const MENUS: Array<MenuConfig> = [
     {
         displayName: 'Algorithms',
-        route: 'algorithms',
+        route: 'interview-prep/algorithms',
         subMenu: algorithmsMenu,
     },
     {
         displayName: 'Data structures',
-        route: 'data-structures',
+        route: 'interview-prep/data-structures',
         subMenu: dataStructuresMenu,
     },
     {
         displayName: 'Async JS',
-        route: 'async-js',
+        route: 'interview-prep/async-js',
         subMenu: asyncJsMenu,
     },
     {
         displayName: 'JS Fundamentals',
-        route: 'async-js',
+        route: 'interview-prep/async-js',
         subMenu: asyncJsMenu,
     },
     {
         displayName: 'Web Basics',
-        route: 'web-fundamentals',
+        route: 'interview-prep/web-fundamentals',
         subMenu: webPerfMenu,
     },
 ];
