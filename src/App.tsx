@@ -15,12 +15,12 @@ function App() {
         <Switch>
           <Route
             exact
-            path="interview-prep/algorithms"
+            path="/interview-prep/algorithms"
             component={AlgorithmOverview}
           />
           <Route
             exact
-            path="interview-prep/async-js/rx-js"
+            path="/interview-prep/async-js/rx-js"
             component={RxJs}
           />
         </Switch>
