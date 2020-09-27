@@ -15,12 +15,12 @@ function App() {
         <Switch>
           <Route
             exact
-            path="/algorithms"
+            path="#/algorithms"
             component={AlgorithmOverview}
           />
           <Route
             exact
-            path="/async-js/rx-js"
+            path="#/async-js/rx-js"
             component={RxJs}
           />
         </Switch>
