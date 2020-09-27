@@ -70,7 +70,12 @@ export const MENUS: Array<MenuConfig> = [
         subMenu: asyncJsMenu,
     },
     {
-        displayName: 'Web Fundamentals',
+        displayName: 'JS Fundamentals',
+        route: 'async-js',
+        subMenu: asyncJsMenu,
+    },
+    {
+        displayName: 'Web Basics',
         route: 'web-fundamentals',
         subMenu: webPerfMenu,
     },

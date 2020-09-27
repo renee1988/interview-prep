@@ -5,6 +5,7 @@ import {Menu} from './layout/menu';
 import {AlgorithmOverview} from './algorithms/overview';
 import './App.css';
 import {MENUS} from './layout/menu/constants';
+import {RxJs} from './async-js/rx-js';
 
 function App() {
   return (
@@ -14,8 +15,13 @@ function App() {
         <Switch>
           <Route
             exact
-            path="/algorithms/overview"
+            path="/algorithms"
             component={AlgorithmOverview}
+          />
+          <Route
+            exact
+            path="/async-js/rx-js"
+            component={RxJs}
           />
         </Switch>
       </div>

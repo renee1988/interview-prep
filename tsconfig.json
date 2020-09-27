@@ -20,7 +20,8 @@
     "jsx": "react",
     "typeRoots" : [
       "node_modules/@types/",
-      "./typings/globals.d.ts"
+      "./typings/globals.d.ts",
+      "./typings/get-all-files/index.d.ts"
     ]
   },
   "include": [
