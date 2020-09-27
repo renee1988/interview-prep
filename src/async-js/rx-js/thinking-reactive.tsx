@@ -1,8 +1,19 @@
 import Markdown from 'markdown-to-jsx';
 import React from 'react';
 
-const eventEmittersMd = require("./markdowns/thinking-reactive/event-emitters.md");
+import {ExpandableSection} from '../../components/expandable-section';
+
+const thinkingReactivelyMd = require("./markdowns/thinking-reactive/sync-vs-async.md");
 
 export const ThinkingReactive = () => (
-    <Markdown>{eventEmittersMd}</Markdown>
+    <article>
+        <ExpandableSection
+            description="Callback-based vs. promise-based vs. observable-based asynchronous JS"
+            title="Thinking Reactively"
+        >
+            <div style={{margin: '0 2rem'}}>
+                <Markdown>{thinkingReactivelyMd}</Markdown>
+            </div>
+        </ExpandableSection>
+    </article>
 );
