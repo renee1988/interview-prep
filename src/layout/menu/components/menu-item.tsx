@@ -1,19 +1,23 @@
 import React, {memo, MouseEvent} from 'react';
 import {MenuConfig} from '../interfaces';
-import {SubMenu} from './sub-menu';
+import {Menu} from '../containers/menu';
 
 interface IMenuItem {
     menuConfig: MenuConfig,
     onClick(e: MouseEvent): void,
+    parent?: MenuConfig,
     showSubMenu?: boolean,
 }
 
-export const MenuItem = memo<IMenuItem>(({menuConfig, onClick, showSubMenu}: IMenuItem) => (
-    <div key={menuConfig.route} className={`menu-item-container ${showSubMenu ? 'expanded' : ''}`}>
+export const MenuItem = memo<IMenuItem>(({menuConfig, onClick, parent, showSubMenu}: IMenuItem) => (
+    <div
+        key={menuConfig.route}
+        className={`${parent ? 'sub-menu-item' : 'menu-item-container'} ${showSubMenu ? 'expanded' : ''}`}>
         <div
             key="display-name"
             className="menu-item-display-name"
-            data-testid={menuConfig.displayName}
+            data-menuname={menuConfig.displayName}
+            data-route={menuConfig.route}
             onClick={onClick}
         >
             <div key="text">{menuConfig.displayName}</div>
@@ -26,7 +30,7 @@ export const MenuItem = memo<IMenuItem>(({menuConfig, onClick, showSubMenu}: IMe
         {
             showSubMenu &&
                 menuConfig.subMenu && 
-                    <SubMenu menuConfigs={menuConfig.subMenu} />
+                    <Menu menus={menuConfig.subMenu} parent={menuConfig} />
         }
     </div>
 ));
