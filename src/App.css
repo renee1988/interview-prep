@@ -1,12 +1,29 @@
 .app {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 300px 1fr;
   height: 100vh;
   font-family: Ringside Regular A,Ringside Regular B,Rubik,Lato,Lucida Grande,Lucida Sans Unicode,Tahoma,Sans-Serif;
 }
 
 strong + p {
   display: inline;
+}
+
+code {
+  background-color: rgb(43, 88, 12, 0.1)
+}
+
+code + p {
+  display: inline;
+}
+
+pre {
+  border: 1px white solid;
+  border-radius: 3px;
+  background-color: rgb(43, 88, 12);
+  color: white;
+  padding: 1rem;
+  font-weight: bold;
 }
 
 @media (prefers-reduced-motion: no-preference) {

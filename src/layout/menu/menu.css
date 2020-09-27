@@ -4,6 +4,7 @@
     color: rgb(43,88,12);
     font-size: 16px;
     font-weight: bolder;
+    width: 300px;
 }
 
 .menu-item-container {
@@ -22,7 +23,7 @@
 .menu-item-display-name {
     line-height: 1.5rem;
     display: grid;
-    grid-template-columns: 1fr 25px;
+    grid-template-columns: 2fr 25px;
 }
 
 .menu-item-display-name .selected-arrow {
