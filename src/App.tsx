@@ -12,18 +12,20 @@ function App() {
     <Router>
       <div className="app">
         <Menu menus={MENUS} />
-        <Switch>
-          <Route
-            exact
-            path="/interview-prep/algorithms"
-            component={AlgorithmOverview}
-          />
-          <Route
-            exact
-            path="/interview-prep/async-js/rx-js"
-            component={RxJs}
-          />
-        </Switch>
+        <div className="markdown-container">
+          <Switch>
+            <Route
+              exact
+              path="/interview-prep/algorithms"
+              component={AlgorithmOverview}
+            />
+            <Route
+              exact
+              path="/interview-prep/async-js/rx-js"
+              component={RxJs}
+            />
+          </Switch>
+        </div>
       </div>
     </Router>
   );
