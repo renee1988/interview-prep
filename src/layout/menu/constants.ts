@@ -60,6 +60,17 @@ const effectiveJavaMenu: Array<MenuConfig> = [
     },
 ]
 
+const typescriptMenu: Array<MenuConfig> = [
+    {
+        displayName: 'Overview',
+        route: 'overview',
+    },
+    {
+        displayName: 'Latest TypeScript Features',
+        route: 'latest-typescript-features',
+    },
+]
+
 export const MENUS: Array<MenuConfig> = [
     {
         displayName: 'Algorithms',
@@ -90,5 +101,10 @@ export const MENUS: Array<MenuConfig> = [
         displayName: 'Effective Java',
         route: 'interview-prep/effective-java',
         subMenu: effectiveJavaMenu,
+    },
+    {
+        displayName: 'TypeScript',
+        route: 'interview-prep/typescript',
+        subMenu: typescriptMenu,
     },
 ];

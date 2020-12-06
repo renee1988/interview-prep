@@ -6,7 +6,11 @@ import {AlgorithmOverview} from './algorithms/overview';
 import './App.css';
 import {MENUS} from './layout/menu/constants';
 import {RxJs} from './async-js/rx-js';
-import {Exceptions} from './effective-java/exceptions';
+import { Typescript } from './typescript';
+import { EffectiveJava } from './effective-java';
+import { Exceptions } from './effective-java/exceptions';
+import { Overview } from './typescript/overview';
+import { LatestTypescriptFeatures } from './typescript/latest-typescript-features';
 
 function App() {
   return (
@@ -29,6 +33,21 @@ function App() {
               exact
               path="/interview-prep/effective-java/exceptions"
               component={Exceptions}
+            />
+            <Route
+              exact
+              path="/interview-prep/typescript"
+              component={Overview}
+            />
+            <Route
+              exact
+              path="/interview-prep/typescript/overview"
+              component={Overview}
+            />
+            <Route
+              exact
+              path="/interview-prep/typescript/latest-typescript-features"
+              component={LatestTypescriptFeatures}
             />
           </Switch>
         </div>
