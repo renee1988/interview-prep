@@ -11,7 +11,7 @@ export const ThinkingReactive = () => (
             description="Callback-based vs. promise-based vs. observable-based asynchronous JS"
             title="Thinking Reactively"
         >
-            <div style={{margin: '0 2rem'}}>
+            <div style={{padding: '1rem 2rem'}}>
                 <Markdown>{thinkingReactivelyMd}</Markdown>
             </div>
         </ExpandableSection>

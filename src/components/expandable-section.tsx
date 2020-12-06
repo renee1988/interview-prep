@@ -18,7 +18,7 @@ export const ExpandableSection = ({children, description, title}: IExpandableSec
                 onClick={toggleExpand}
                 style={{
                     backgroundColor: '#EEEEEE',
-                    padding: '1.5rem 2rem',
+                    padding: expanded ? '1.5rem 2rem 0 2rem' : '1.5rem 2rem',
                     cursor: 'pointer',
                 }}
             >    
@@ -39,7 +39,8 @@ export const ExpandableSection = ({children, description, title}: IExpandableSec
                     )}
                 </div>
             </div>
-            {expanded && children}
+            {expanded &&
+                <div style={{backgroundColor: '#EEEEEE'}}>{children}</div>}
         </div>
     );
 }

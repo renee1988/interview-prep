@@ -6,6 +6,7 @@ import {AlgorithmOverview} from './algorithms/overview';
 import './App.css';
 import {MENUS} from './layout/menu/constants';
 import {RxJs} from './async-js/rx-js';
+import {Exceptions} from './effective-java/exceptions';
 
 function App() {
   return (
@@ -23,6 +24,11 @@ function App() {
               exact
               path="/interview-prep/async-js/rx-js"
               component={RxJs}
+            />
+            <Route
+              exact
+              path="/interview-prep/effective-java/exceptions"
+              component={Exceptions}
             />
           </Switch>
         </div>

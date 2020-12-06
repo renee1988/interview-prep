@@ -53,6 +53,13 @@ const webPerfMenu: Array<MenuConfig> = [
     },
 ];
 
+const effectiveJavaMenu: Array<MenuConfig> = [
+    {
+        displayName: 'Exceptions',
+        route: 'exceptions',
+    },
+]
+
 export const MENUS: Array<MenuConfig> = [
     {
         displayName: 'Algorithms',
@@ -78,5 +85,10 @@ export const MENUS: Array<MenuConfig> = [
         displayName: 'Web Basics',
         route: 'interview-prep/web-fundamentals',
         subMenu: webPerfMenu,
+    },
+    {
+        displayName: 'Effective Java',
+        route: 'interview-prep/effective-java',
+        subMenu: effectiveJavaMenu,
     },
 ];
