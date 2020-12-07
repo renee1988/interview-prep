@@ -13,6 +13,7 @@ import { Overview } from './typescript/overview';
 import { LatestTypescriptFeatures } from './typescript/latest-typescript-features';
 import { AppVsLibraryConcerns } from './typescript/app-vs-library-concerns';
 import { CreateProjectFromScratch } from './typescript/create-project-from-scratch';
+import { DeclarationFiles } from './typescript/declaration-files';
 
 function App() {
   return (
@@ -60,6 +61,11 @@ function App() {
               exact
               path="/interview-prep/typescript/create-project-from-scratch"
               component={CreateProjectFromScratch}
+            />
+            <Route
+              exact
+              path="/interview-prep/typescript/declaration-files"
+              component={DeclarationFiles}
             />
           </Switch>
         </div>

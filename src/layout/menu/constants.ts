@@ -77,6 +77,10 @@ const typescriptMenu: Array<MenuConfig> = [
         displayName: 'Create Project from Scratch',
         route: 'create-project-from-scratch',
     },
+    {
+        displayName: 'Declaration files',
+        route: 'declaration-files',
+    },
 ]
 
 export const MENUS: Array<MenuConfig> = [
