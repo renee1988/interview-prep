@@ -72,7 +72,11 @@ const typescriptMenu: Array<MenuConfig> = [
     {
         displayName: 'App vs. Library Concerns',
         route: 'app-vs-library-concerns',
-    }
+    },
+    {
+        displayName: 'Create Project from Scratch',
+        route: 'create-project-from-scratch',
+    },
 ]
 
 export const MENUS: Array<MenuConfig> = [

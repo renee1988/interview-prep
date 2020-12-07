@@ -12,6 +12,7 @@ import { Exceptions } from './effective-java/exceptions';
 import { Overview } from './typescript/overview';
 import { LatestTypescriptFeatures } from './typescript/latest-typescript-features';
 import { AppVsLibraryConcerns } from './typescript/app-vs-library-concerns';
+import { CreateProjectFromScratch } from './typescript/create-project-from-scratch';
 
 function App() {
   return (
@@ -54,6 +55,11 @@ function App() {
               exact
               path="/interview-prep/typescript/app-vs-library-concerns"
               component={AppVsLibraryConcerns}
+            />
+            <Route
+              exact
+              path="/interview-prep/typescript/create-project-from-scratch"
+              component={CreateProjectFromScratch}
             />
           </Switch>
         </div>
