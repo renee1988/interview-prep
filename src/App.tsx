@@ -11,6 +11,7 @@ import { EffectiveJava } from './effective-java';
 import { Exceptions } from './effective-java/exceptions';
 import { Overview } from './typescript/overview';
 import { LatestTypescriptFeatures } from './typescript/latest-typescript-features';
+import { AppVsLibraryConcerns } from './typescript/app-vs-library-concerns';
 
 function App() {
   return (
@@ -48,6 +49,11 @@ function App() {
               exact
               path="/interview-prep/typescript/latest-typescript-features"
               component={LatestTypescriptFeatures}
+            />
+            <Route
+              exact
+              path="/interview-prep/typescript/app-vs-library-concerns"
+              component={AppVsLibraryConcerns}
             />
           </Switch>
         </div>

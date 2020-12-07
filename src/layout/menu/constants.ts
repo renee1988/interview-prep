@@ -69,6 +69,10 @@ const typescriptMenu: Array<MenuConfig> = [
         displayName: 'Latest TypeScript Features',
         route: 'latest-typescript-features',
     },
+    {
+        displayName: 'App vs. Library Concerns',
+        route: 'app-vs-library-concerns',
+    }
 ]
 
 export const MENUS: Array<MenuConfig> = [

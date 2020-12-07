@@ -159,3 +159,13 @@ try {
     console.log(error.stack);
 }
 ```
+
+#### Import Types
+```ts
+import type {someFunction} from \\"./util\\";
+```
+The code above only imports the type information of `someFunction`.
+
+If you are using module bundlers like WebPack, you know that WebPack analyzes the code you import as a mechanism to split your code (so that you don't need to send code you don't need on page load).
+
+Type imports is a way that we can refer to a type in a module without actually importing the entire function, this will not trigger additional code to be included in your bundle.
