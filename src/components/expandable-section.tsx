@@ -7,7 +7,7 @@ interface IExpandableSection {
 }
 
 export const ExpandableSection = ({children, description, title}: IExpandableSection) => {
-    const [expanded, setExpanded] = useState(true);
+    const [expanded, setExpanded] = useState(false);
     const toggleExpand = useCallback(() => {
         setExpanded(!expanded);
     }, [expanded]);
@@ -35,7 +35,7 @@ export const ExpandableSection = ({children, description, title}: IExpandableSec
                 <div style={{display: 'inline-block', verticalAlign: 'middle'}}>
                     <div style={{fontSize: '25px'}}>{title}</div>
                     {description && (
-                        <div style={{fontSize: '12px'}}>{description}</div>
+                        <div style={{fontSize: '16px', marginTop: '1rem'}}>{description}</div>
                     )}
                 </div>
             </div>
