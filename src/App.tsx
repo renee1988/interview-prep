@@ -13,6 +13,7 @@ import { LatestTypescriptFeatures } from './typescript/2-latest-typescript-featu
 import { AppVsLibraryConcerns } from './typescript/3-app-vs-library-concerns';
 import { CreateProjectFromScratch } from './typescript/4-create-project-from-scratch';
 import { DeclarationFiles } from './typescript/5-declaration-files';
+import { ObjectCreationAndDestruction } from './effective-java/objects';
 
 function App() {
   return (
@@ -35,6 +36,11 @@ function App() {
               exact
               path="/interview-prep/effective-java/exceptions"
               component={Exceptions}
+            />
+            <Route
+              exact
+              path="/interview-prep/effective-java/objects"
+              component={ObjectCreationAndDestruction}
             />
             <Route
               exact

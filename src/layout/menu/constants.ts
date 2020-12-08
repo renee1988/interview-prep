@@ -58,7 +58,11 @@ const effectiveJavaMenu: Array<MenuConfig> = [
         displayName: 'Exceptions',
         route: 'exceptions',
     },
-]
+    {
+        displayName: 'Object Creation & Destruction',
+        route: 'objects',
+    },
+];
 
 const typescriptMenu: Array<MenuConfig> = [
     {
