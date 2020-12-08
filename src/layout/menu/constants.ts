@@ -81,7 +81,14 @@ const typescriptMenu: Array<MenuConfig> = [
         displayName: 'Declaration files',
         route: 'declaration-files',
     },
-]
+];
+
+const jsFundamentalsMenu: Array<MenuConfig> = [
+    {
+        displayName: 'Event loop',
+        route: 'event-loop',
+    },
+];
 
 export const MENUS: Array<MenuConfig> = [
     {
@@ -101,8 +108,8 @@ export const MENUS: Array<MenuConfig> = [
     },
     {
         displayName: 'JS Fundamentals',
-        route: 'interview-prep/async-js',
-        subMenu: asyncJsMenu,
+        route: 'interview-prep/js-fundamentals',
+        subMenu: jsFundamentalsMenu,
     },
     {
         displayName: 'Web Basics',

@@ -6,14 +6,13 @@ import {AlgorithmOverview} from './algorithms/overview';
 import './App.css';
 import {MENUS} from './layout/menu/constants';
 import {RxJs} from './async-js/rx-js';
-import { Typescript } from './typescript';
-import { EffectiveJava } from './effective-java';
 import { Exceptions } from './effective-java/exceptions';
-import { Overview } from './typescript/overview';
-import { LatestTypescriptFeatures } from './typescript/latest-typescript-features';
-import { AppVsLibraryConcerns } from './typescript/app-vs-library-concerns';
-import { CreateProjectFromScratch } from './typescript/create-project-from-scratch';
-import { DeclarationFiles } from './typescript/declaration-files';
+import { EventLoop } from './js-fundamentals/event-loop';
+import { Overview } from './typescript/1-overview';
+import { LatestTypescriptFeatures } from './typescript/2-latest-typescript-features';
+import { AppVsLibraryConcerns } from './typescript/3-app-vs-library-concerns';
+import { CreateProjectFromScratch } from './typescript/4-create-project-from-scratch';
+import { DeclarationFiles } from './typescript/5-declaration-files';
 
 function App() {
   return (
@@ -66,6 +65,11 @@ function App() {
               exact
               path="/interview-prep/typescript/declaration-files"
               component={DeclarationFiles}
+            />
+            <Route
+              exact
+              path="/interview-prep/js-fundamentals/event-loop"
+              component={EventLoop}
             />
           </Switch>
         </div>

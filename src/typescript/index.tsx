@@ -1,9 +1,9 @@
 import React from 'react';
-import {Overview} from './overview/index';
-import {LatestTypescriptFeatures} from './latest-typescript-features';
-import {AppVsLibraryConcerns} from './app-vs-library-concerns';
-import { CreateProjectFromScratch } from './create-project-from-scratch';
-import { DeclarationFiles } from './declaration-files';
+import {Overview} from './1-overview/index';
+import {LatestTypescriptFeatures} from './2-latest-typescript-features';
+import {AppVsLibraryConcerns} from './3-app-vs-library-concerns';
+import { CreateProjectFromScratch } from './4-create-project-from-scratch';
+import { DeclarationFiles } from './5-declaration-files';
 
 export const Typescript = () => (
     <article>
