@@ -34,12 +34,12 @@ function App() {
             />
             <Route
               exact
-              path="/interview-prep/effective-java/exceptions"
+              path="/interview-prep/java-best-practices/exceptions"
               component={Exceptions}
             />
             <Route
               exact
-              path="/interview-prep/effective-java/objects"
+              path="/interview-prep/java-best-practices/objects"
               component={ObjectCreationAndDestruction}
             />
             <Route

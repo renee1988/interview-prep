@@ -121,8 +121,8 @@ export const MENUS: Array<MenuConfig> = [
         subMenu: webPerfMenu,
     },
     {
-        displayName: 'Effective Java',
-        route: 'interview-prep/effective-java',
+        displayName: 'Java Best Practices',
+        route: 'interview-prep/java-best-practices',
         subMenu: effectiveJavaMenu,
     },
     {
