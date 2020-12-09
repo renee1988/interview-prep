@@ -14,6 +14,7 @@ import { AppVsLibraryConcerns } from './typescript/3-app-vs-library-concerns';
 import { CreateProjectFromScratch } from './typescript/4-create-project-from-scratch';
 import { DeclarationFiles } from './typescript/5-declaration-files';
 import { ObjectCreationAndDestruction } from './effective-java/objects';
+import { ClassesAndInterfaces } from './effective-java/classes';
 
 function App() {
   return (
@@ -41,6 +42,11 @@ function App() {
               exact
               path="/interview-prep/java-best-practices/objects"
               component={ObjectCreationAndDestruction}
+            />
+            <Route
+              exact
+              path="/interview-prep/java-best-practices/classes-and-interfaces"
+              component={ClassesAndInterfaces}
             />
             <Route
               exact

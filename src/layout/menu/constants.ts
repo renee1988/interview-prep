@@ -62,6 +62,10 @@ const effectiveJavaMenu: Array<MenuConfig> = [
         displayName: 'Object Creation & Destruction',
         route: 'objects',
     },
+    {
+        displayName: 'Classes and Interfaces',
+        route: 'classes-and-interfaces'
+    }
 ];
 
 const typescriptMenu: Array<MenuConfig> = [
