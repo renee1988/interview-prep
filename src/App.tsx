@@ -15,6 +15,7 @@ import { CreateProjectFromScratch } from './typescript/4-create-project-from-scr
 import { DeclarationFiles } from './typescript/5-declaration-files';
 import { ObjectCreationAndDestruction } from './effective-java/objects';
 import { ClassesAndInterfaces } from './effective-java/classes';
+import { Basics } from './async-js/basics';
 
 function App() {
   return (
@@ -27,6 +28,11 @@ function App() {
               exact
               path="/interview-prep/algorithms"
               component={AlgorithmOverview}
+            />
+            <Route
+              exact
+              path="/interview-prep/async-js/basics"
+              component={Basics}
             />
             <Route
               exact
