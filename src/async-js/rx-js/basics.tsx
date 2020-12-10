@@ -9,7 +9,7 @@ const observablesMd = require("./markdowns/basics/2-observables.md");
 export const Basics = () => (
     <article>
         <ExpandableSection title="RxJs Basics">
-            <div style={{padding: '1rem 2rem'}}>
+            <div style={{padding: '1rem 2rem 0rem 2rem'}}>
                 <Markdown>{buildingBlocksMd}</Markdown>
             </div>
             <div style={{padding: '1rem 2rem'}}>

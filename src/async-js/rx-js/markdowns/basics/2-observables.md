@@ -1,5 +1,11 @@
-**Observable === Collection + Time**: an Observable is a collection of which items are arrives over time.
-## Why is Observable so powerful?
+-------------------------------------------------------------------------------
+## Observerables & Observers
+
+**Observable === Collection + Time**
+
+An Observable is a collection of which items are arrives over time.
+
+### Why is Observable so powerful?
 Observables can model:
 * Events
 * Async server requests
