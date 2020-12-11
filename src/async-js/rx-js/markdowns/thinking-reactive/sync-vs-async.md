@@ -55,3 +55,63 @@ Event emitter is a popular mechanism for asynchronous event-based architecture.
 - `EventEmitter` class in NodeJs is used to implement APIs:
   - WebSocket I/O
   - File reading & writing
+
+Subscribing to an event emitter is done through the `addListener()` method, which allows you to provide the callback that will be called when an event of interest is fired.
+
+Unfortunately as you can tell, event emitters have all the same problems associated with using callbacks to handle emitted data coming from multiple composed resources.
+
+#### Promises
+`Promises` represent any asynchronous computatation that is expected to complete in the **future**. You can chain together actions with future values to form a **continuation** (i.e., callbacks).
+
+A `Promise` is a data type that wraps an asynchronous or long-running operation, **a future value**, with the the ability for you to subscribe to its result or its error.
+* One cannot alter the vlaue of a `Promise` once it has been executed, the value is **immutable**.
+
+<img style="width:80%" src="./promise-doodle.jpg">
+
+#### What problems are RxJS solving?
+RxJs is combining both functional and reactive programming paradigms:
+* `for` and `while` loops are not async aware, meaning they do not have knowledge of wait time or latency between iterations.
+* Nested callbacks (callback hell) are hard to reason about.
+* Error handling become convoluted when you begin to nesting try/catch blocks within each callback.
+* Excessive use of closure -> side effects -> bad.
+* It is hard to determine when to cancel a long-running operation.
+* It is hard to deal with throttle and debounce in the traditional way.
+* As the UI becomes larger and richer, memory management becomes harder (memory leaks and growth of browser process become noticable).
+
+The goal is to abstract the notion of time/latency away from our code and model our async code using a linear sequence of steps **through which data can flow over time**.
+* Works with both synchronous and asynchronous code
+* Handles errors
+* Discourage side effects
+* Scales out from one to a stream of events
+
+### Thinking in streams
+Definition of a **stream** traditionally is an abstract object related to I/O operations such as reading a file, reading a socket or requesting data from an HTTP server.
+* Node has readable, writable and duplex streams.
+
+Defintion of a **stream** in the Reactive Programming world is expanded to *any data source that can be consumed*.
+
+#### Propogation of Change
+```javascript
+let a = 20;
+let b = 22;
+let c = a + b; // c = 42
+a = 100;
+// c is still 42
+```
+The code above has no **propogation of change**.
+
+```javascript
+// Create A$ and B$, two data streams.
+const A$ = [20];
+const B$ = [22];
+const C$ = A$.concat(B$).reduce(add);
+// C$ is a stream with values: [42]
+A$.push(100);
+// Now what values does C$ have?
+```
+If A$ receives a new value, this state is pushed through any streams that it's a part of.
+
+**Reactive programming is oriented around data flows and propogation.**
+
+In the example above, C$ is an always-on varaible that *reacts* to any change and causes actions to ripple through it when any constituent part changes.
+ 
