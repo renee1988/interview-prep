@@ -114,3 +114,20 @@ You do not use `concatAll` when dealing with infinite streams. For instance, in 
 **DOM events are hot observables and have no notion of completion.**
 
 If there is an error happened between 2 and 3 in the above example, the resulting data stream will not have 3 and 4.
+
+### `takeUntil`
+`takeUntil` takes in two observables: source observable and stop observable, then creates a new observable.
+```
+       1      2                  3
+-------x------x------------------x----------
+                      4
+----------------------x---------------------
+Result:
+       1      2                  
+-------x------x--------
+```
+
+Every time when the source observable emits data, `takeUntil` forwards it on, but as soon as the stop observable emits **the first value** or errors out, it completes the new observable.
+Under the hood, it calls `dispose` to unsubscribe on both the source observable and the stop observable.
+
+**`takeUntil` can take in two infinite observables and produce an observable that completes when you want to.**
