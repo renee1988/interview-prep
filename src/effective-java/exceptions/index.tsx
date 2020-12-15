@@ -1,5 +1,6 @@
 import React from 'react';
 import { CheckedExceptions } from './checked-exceptions';
+import { DocumentExceptions } from './document-exceptions';
 import { ReuseStandardExceptions } from './reuse-standard-exceptions';
 import { ThrowExceptions } from './throw-exceptions';
 import { UnnecessaryCheckedExceptions } from './unnecessary-checked-exceptions';
@@ -12,5 +13,6 @@ export const Exceptions = () => (
         <UnnecessaryCheckedExceptions />
         <ReuseStandardExceptions />
         <ThrowExceptions />
+        <DocumentExceptions />
     </article>
 );
