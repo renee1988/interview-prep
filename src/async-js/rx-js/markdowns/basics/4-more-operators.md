@@ -23,7 +23,7 @@ An observable of observables:
 {
 ...{1},
 ...........{2.............3},
-...............{},  <--------- this observable triggered the unsubscription to the previous observable
+...............{},  // this observable triggered the unsubscription to the previous observable
 ....................{4}
 }.switchLatest()
 
