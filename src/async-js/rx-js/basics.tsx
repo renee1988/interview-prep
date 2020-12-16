@@ -5,6 +5,7 @@ import {ExpandableSection} from '../../components/expandable-section';
 
 const buildingBlocksMd = require("./markdowns/basics/1-building-blocks.md");
 const observablesMd = require("./markdowns/basics/2-observables.md");
+const mouseDragsExampleMd = require("./markdowns/basics/3-mouse-drags-example.md");
 
 export const Basics = () => (
     <article>
@@ -14,6 +15,9 @@ export const Basics = () => (
             </div>
             <div style={{padding: '1rem 2rem'}}>
                 <Markdown>{observablesMd}</Markdown>
+            </div>
+            <div style={{padding: '1rem 2rem'}}>
+                <Markdown>{mouseDragsExampleMd}</Markdown>
             </div>
         </ExpandableSection>
     </article>
