@@ -2,6 +2,7 @@ import React from 'react';
 import { CheckedExceptions } from './checked-exceptions';
 import { DocumentExceptions } from './document-exceptions';
 import { ExceptionDetailMessages } from './exception-detail-messages';
+import { FailureAtomicity } from './failure-atomicity';
 import { ReuseStandardExceptions } from './reuse-standard-exceptions';
 import { ThrowExceptions } from './throw-exceptions';
 import { UnnecessaryCheckedExceptions } from './unnecessary-checked-exceptions';
@@ -16,5 +17,6 @@ export const Exceptions = () => (
         <ThrowExceptions />
         <DocumentExceptions />
         <ExceptionDetailMessages />
+        <FailureAtomicity />
     </article>
 );
