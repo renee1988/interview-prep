@@ -65,6 +65,10 @@ const effectiveJavaMenu: Array<MenuConfig> = [
     {
         displayName: 'Classes and Interfaces',
         route: 'classes-and-interfaces'
+    },
+    {
+        displayName: 'Generics',
+        route: 'generics'
     }
 ];
 

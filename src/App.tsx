@@ -16,6 +16,7 @@ import { DeclarationFiles } from './typescript/5-declaration-files';
 import { ObjectCreationAndDestruction } from './effective-java/objects';
 import { ClassesAndInterfaces } from './effective-java/classes';
 import { Basics } from './async-js/basics';
+import { Generics } from './effective-java/generics';
 
 function App() {
   return (
@@ -43,6 +44,11 @@ function App() {
               exact
               path="/interview-prep/java-best-practices/exceptions"
               component={Exceptions}
+            />
+            <Route
+              exact
+              path="/interview-prep/java-best-practices/generics"
+              component={Generics}
             />
             <Route
               exact
