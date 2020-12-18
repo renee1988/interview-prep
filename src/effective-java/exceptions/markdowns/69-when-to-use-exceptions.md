@@ -1,13 +1,13 @@
 # Use exceptions only for exceptional conditions
 
-```java
+<pre>
 try {
     int i = 0;
     while(true) {
         range[i++].climb();
     }
 } catch(ArrayIndexOutOfBoundsException e) {}
-```
+</pre>
 
 The inifinite loop terminates by throwing, catching and ignoring an `ArrayIndexOutOfBoundsException` when it attempts to access the first array element outside the bounds of the array.
 

@@ -1,7 +1,7 @@
 ## Latest JavaScript Features
 
 ### Optional Chaining
-```ts
+<pre>
 // Example:
 let x: {
     user: {    
@@ -18,10 +18,10 @@ let x: {
 // If x.user.address exists, log the city
 // otherwise, log undefined
 console.log(x.user.address?.city);
-```
+</pre>
 
 ### Nullish Coalescing
-```ts
+<pre>
 class Foo {
     #name: string;
     // `constructor(public name?: string)` is a shorthand
@@ -39,7 +39,7 @@ class Foo {
         console.log(this.#name);
     }
 }
-```
+<pre>
 
 ### Private Fields
 `\#some_variable` vs `private some_variable`
@@ -54,12 +54,12 @@ class Foo {
 Types for class fields that are assigned in constructor are inferred, and no longer need an explicit type declaration.
 
 ### Tuple Types
-```ts
+<pre>
 type Foo<T extends any[]> = [boolean, ...T, boolean];
-```
+</pre>
 
 #### Labeled Tuple Types
-```ts
+<pre>
 type Address = [
     streetNumber: number,
     city: string,
@@ -70,22 +70,22 @@ type Address = [
 function printAddress(...address: Address) {
     // ...
 }
-```
+</pre>
 * The IDE displays the labeled types, it makes the function signature much easier to understand.
 * If you are serializing data (e.g., getting API responses), this saves a lot of space.
   * Imagine you are getting 50KB of JSON data from an API call. The tuple representation is a more compact way to represent the same data than an object.
 
 ### Type Aliases and Interfaces
-```ts
+<pre>
 // Old way of defining a JSON array
 type JSONValue = string|number|boolean|null|JSONArray|JSONObject;
 interface JSONObject = {
     [k: string]: JSONValue;
 }
 interface JSONArray extends Array<JSONValue> {}
-```
+</pre>
 #### Recursive Type Aliases
-```ts
+<pre>
 type JSONValue =
     | string
     | number
@@ -93,27 +93,27 @@ type JSONValue =
     | null
     | JSONValue[]
     | {\[k: string\]: JSONValue;};
-```
+</pre>
 
 ### Template Typed Literals
-```ts
+<pre>
 type Corner = \`${\\"top\\" | \\"bottom\\"}-${\\"left\\" | \\"right\\"}\`;
-```
+</pre>
 The type `Corner` can only have values: "top-left", "top-right", "bottom-left" and "bottom-right".
 
 ### Error and Assertion Handling
 
 #### @ts-expect-error
 * `// @ts-expect-error` suppresses the type errors.
-```ts
+<pre>
 // @ts-expect-error
 const num: number = \\"hello\\";
-```
+</pre>
 * `// @ts-ignore` suppresses the type errors.
-```ts
+<pre>
 // @ts-ignore
 const num: number = \\"hello\\";
-```
+</pre>
 * ts-ignore vs. ts-expect-error
   * Always use ts-expect-error over ts-ignore
   * If later on the type is corrected from string to number, ts-expect-error will show error: Unused @ts-expect-error directive.
@@ -123,7 +123,7 @@ const num: number = \\"hello\\";
 #### Type `unknown` on `catch` Clause
 * Big improvement over `any`
 * Forces you to deal with `instanceof Error` properly
-```ts
+<pre>
 function somethingRisky() {}
 try {
     somethingRisky();
@@ -134,18 +134,18 @@ try {
         console.log(error);
     }
 }
-```
+</pre>
 
 #### Assertion Functions
-```ts
+<pre>
 function isError(error: any): error is Error {
     return error instanceof Error;
 }
-```
+</pre>
 * The return type of the function above is not only a boolean but an indication of whether the value is of type `Error`.
 
 With the new assertion function feature:
-```ts
+<pre>
 function assertIsError(error: any): asserts error is Error {
     if (!(error instanceof Error)) {
         throw new Error(`Not an error: ${error}`);
@@ -158,12 +158,12 @@ try {
     assertIsError(error);
     console.log(error.stack);
 }
-```
+</pre>
 
 #### Import Types
-```ts
+<pre>
 import type {someFunction} from \\"./util\\";
-```
+</pre>
 The code above only imports the type information of `someFunction`.
 
 If you are using module bundlers like WebPack, you know that WebPack analyzes the code you import as a mechanism to split your code (so that you don't need to send code you don't need on page load).

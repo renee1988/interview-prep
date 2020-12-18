@@ -1,13 +1,13 @@
 # Declaration Files & Type-only Imports
 
-```shell
+<pre>
 \\# Create a standard tsconfig.json file
 yarn tsc --init
-```
+</pre>
 
 We need to modify the tsconfig.json file since the initialized one is too permissive for production use.
 
-```json
+<pre>
 ...
 ...
 // The property \\"target\\" is the language level that we wish to support.
@@ -52,4 +52,4 @@ We need to modify the tsconfig.json file since the initialized one is too permis
 ...
 // At the end of the file, add the following:
 \\"include\\": [\\"src\\"]
-```
+</pre>

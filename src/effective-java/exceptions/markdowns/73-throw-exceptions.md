@@ -1,15 +1,15 @@
 ## Exception translation
 **Higher layers should catch lower-level exceptions and in their place, throw exceptions that can be explained in terms of the higher-level abstraction.**
-```java
+<pre>
 try {
     // ...
 } catch (LowerLevelException e) {
     trhow new HigherLevelException(...);
 }
-```
+</pre>
 
 Example: `get` method of `AbstractSequentialList` which is an implementation of `List`.
-```java
+<pre>
 pulbic E get(int index) {
     ListIterator<E> i = listInterator(index);
     try {
@@ -18,25 +18,25 @@ pulbic E get(int index) {
         throw new IndexOutOfBoundsException("Index: " + index);
     }
 }
-```
+</pre>
 
 ## Exception chaining
 Exception chaining is useful when the lower-level exception might be helpful to someone debugging the problem that caused the higher-level exception.
-```java
+<pre>
 try {
     // ...
 } catch (LowerLevelException lowerLevelCause) {
     throw new HigherLevelException(lowerLevelCause);
 }
-```
-```java
+</pre>
+<pre>
 // Exception with chaining-aware constructor
 class HigherLevelException extends Exception {
     HigherLevelException(Throwable cause) {
         super(cause);
     }
 }
-```
+</pre>
 * Most standard exceptions have chaining-aware constructors.
 * You can set the cause using `Throwable.initCause` for exceptions that do not have chainging-aware constructors.
 

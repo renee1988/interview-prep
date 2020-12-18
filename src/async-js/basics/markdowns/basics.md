@@ -22,11 +22,11 @@ Async programming is to manage the concurrency in our JavaScript program.
 
 ## Callback
 
-```javascript
+<pre>
 setTimeout(function() {
     console.log(“callback!“);
 }, 1000);
-```
+</pre>
 
 There are two parts of the above code:
 * The first half of the above code is setTimeout function call
@@ -39,7 +39,7 @@ There are two parts of the above code:
 3. Render them in proper order: file1, file2, file3
 4. Output “Complete” after all 3 are done
 
-```javascript
+<pre>
 function fakeAjax(url, cb) {
     const fake_responses = {
         file1: “first text“,
@@ -48,7 +48,6 @@ function fakeAjax(url, cb) {
     };
     const randomDelay = (Math.round(Math.random() * 1e4) % 8000) + 1000;
     console.log(“Requesting: “ + url);
-
     setTimeout(function(){
         cb(fake_responses[url]);
     },randomDelay);
@@ -83,12 +82,12 @@ function getFile(file) {
 getFile(“file1“);
 getFile(“file2“);
 getFile(“file3“);
-```
+</pre>
 
 ## Thunks
 From synchronous perspective, a thunk is a function that has everything already that it needs to do to give you some value back → a function with some closure state keeping track of some value(s) and giving you those values whenever you call it.
 
-```javascript
+<pre>
 // Synchronous thunk
 function add(x, y) {
     return x + y;
@@ -97,11 +96,11 @@ const thunk = function() {
     return add(10, 15);
 }
 thunk();
-```
+</pre>
 
 Asynchronous thunk is a function that doesn’t need any parameters except a callback function to do its job.
 
-```javascript
+<pre>
 function addAsync(x, y, cb) {
     setTimeout(function () {
         cb(x + y);
@@ -113,10 +112,10 @@ const thunk = function (cb) {
 thunk(function(sum) {
     return sum;
 });
-```
+</pre>
 
 **Example exercise:**
-```javascript
+<pre>
 // Active thunk
 function getFile(file) {
     let text;
@@ -150,7 +149,7 @@ thunk1(function (text1) {
         });
     });
 });
-```
+</pre>
 
 Thunk is using the closure to maintain a state of something, which eliminates time as a complex factor of state.
 
@@ -159,7 +158,7 @@ Promise example: restaurant ordering. When you pay a meal at a fast food restaur
 
 **Promise → a placeholder to eliminate time as a concern wrapped around the future value.**
 
-```javascript
+<pre>
 function trackCheckout(info) {
     return new Promise(
         function(resolve, reject) {
@@ -170,7 +169,7 @@ function trackCheckout(info) {
         }
     );
 }
-```
+</pre>
 
 **Promise trust:**
 * only resolved once
@@ -181,7 +180,7 @@ function trackCheckout(info) {
 
 **Promise flow control → promise chaining**
 
-```javascript
+<pre>
 doFirstThing                        doFirstThing()
     then doSecondThing                  .then(function() {
                                             return doSecondThing();
@@ -191,11 +190,11 @@ doFirstThing                        doFirstThing()
                                         })
     then complete                       .then(complete, error);
 or error
-```
+</pre>
 
 **Example exercise:**
 
-```javascript
+<pre>
 function getFile(file) {
     return new Promise(function (resolve, reject) {
         fakeAjax(file, resolve);
@@ -215,13 +214,13 @@ promises
 // that fires off an asynchronous function under the covers that tells
 // the built-in JS Promise to go through a list of "then" handlers
 // registered and execute them.
-```
+</pre>
 
 **Abstractions**
 * `Promise.all`
 * `Promise.race`
 
-```javascript
+<pre>
 // Race example: implement a timeout
 // Some async action returns a promise
 function someAsyncAction() {...}
@@ -236,14 +235,14 @@ Promise.race([
         }, 3000);
     });
 ]);
-```
+</pre>
 
 ## Generators
 All normal functions in JavaScript has a “**run-to-completion**” semantic → one of the most important JavaScript characteristics is that it allows us to reason about our code in a single-threaded fashion, never need to worry about two functions one interrupting the other, corrupting the shared memories.
 * A generator is a syntactic form of declaring a state machine.
 * A generator can be thought of a **pause-able function**.
 
-```javascript
+<pre>
 function* gen() {
     console.log(“Hello“);
     yield; // pause
@@ -252,11 +251,11 @@ function* gen() {
 const it = gen();
 it.next(); // Hello
 it.next(); // World
-```
+</pre>
 
 **Messaging**
 
-```javascript
+<pre>
 function* main() {
     yield 1;
     yield 2;
@@ -268,9 +267,9 @@ it.next(); // returns {value: 1, done: false}
 it.next(); // returns {value: 2, done: false}
 it.next(); // returns {value: 3, done: false}
 it.next(); // returns {value: 4, done: true}
-```
+</pre>
 
-```javascript
+<pre>
 function coroutine(g) {
     const it = g();
     return function() {
@@ -287,11 +286,11 @@ run(10); // this call completes const x = 1 + (yield); -> 11
 console.log(
     “Meaning of life: “ + run(30).value
 ); // Meaning of life: 42
-```
+</pre>
 
 **Asynchronous generators**
 
-```javascript
+<pre>
 function getData(d) {
     setTimeout(function () {
         run(d);
@@ -308,20 +307,20 @@ const run = coroutine(function* () {
     console.log(answer);
 });
 run();
-```
+</pre>
 
 **Promise + Generator → yield promise**
 
-```javascript
+<pre>
 async function foo() {
     await ajax(...);
 }
 foo();
-```
+</pre>
 
 **Example exercise:**
 
-```javascript
+<pre>
 async function getFiles() {
     const p1 = getFile(“file1“);
     const p2 = getFile(“file2“);
@@ -331,7 +330,7 @@ async function getFiles() {
     output(await p3)
     output(“Complete“);    
 }
-```
+</pre>
 
 > Do I need anything to happen in parallel? If so, store those things into intermediate promises and then sequence out the response.
 
@@ -343,7 +342,7 @@ An observable is similar to a chain of calculated fields in a spreadsheet. In a 
 
 In our code, we can declare an observable as our data source (data stream), and we can subscribe to the observable in one or more locations in our system.
 
-```javascript
+<pre>
 // Example using RxJS
 // Rx.Observable.fromEvent takes in a DOM element and
 // a DOM event. It hooks the event name to the element
@@ -362,7 +361,7 @@ observable
         const className = data[1];
         console.log(className);
     });
-```
+</pre>
 **RxJS Examples Reference: [rxmarbles.com](http://rxmarbles.com/)**
 
 ## Communicating Sequential Processes
@@ -381,7 +380,7 @@ CSP models your application with lots of tiny independent processes.
   * Generator can block itself but not affect any other part of the application.
   * We can have a bunch of generators running in different parts of our application, they are all independent of each other. At some point in time, two generators want to coordinate with each other, they need a communication channel where they can both block each other, waiting for each other to show up. Once the message is shown up and sent to each other, they will be unblocked and go back to be independent again.
 
-```javascript
+<pre>
 const ch = chan();
 function* process1() {
     yield put(ch, “Hello“);
@@ -395,11 +394,11 @@ function* process2() {
 }
 // Hello World
 // Done!
-```
+</pre>
 
 **Event channels**
 
-```javascript
+<pre>
 function fromEvent(element, eventType) {
     const ch = csp.chan();
     ${el}.bind(eventType, function (e) {
@@ -416,4 +415,4 @@ csp.go(function* () {
         );
     }
 });
-```
+</pre>

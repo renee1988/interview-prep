@@ -7,7 +7,7 @@ Async seems hard:
 * Uncaught async errors
 * Callback hell
 * Code is hard to understand and debug in general
-```javascript
+<pre>
 function play(movieId, cancelButton, callback) {
     // movieTicket and playErrors are your \\"states\\" to
     // track and manage.
@@ -35,34 +35,34 @@ function play(movieId, cancelButton, callback) {
         tryFinish();
     });
 }
-```
+</pre>
 
 ### Functions
 Async Programming without *loops*. You cannot repeat asynchronous function with a loop.
 
 #### `forEach`
 `forEach` takes in a function and applies the function to each of the items in an array.
-```javascript
+<pre>
 [1, 2, 3].forEach(x => console.log(x));
-```
+</pre>
 #### `map`
 `map` takes in a function and applies it to every item in an array creating a new value and put it into a new array. **`map` does not mutate the original array.**
-```javascript
+<pre>
 [1, 2, 3].map(x => x + 1);
-```
+</pre>
 #### `filter`
 `filter` takes in a test function and applies it to every item in an array, only the items that pass the test would make it into the new array `filter` returns.
-```javascript
+<pre>
 [1, 2, 3].filter(x => x > 1);
-```
+</pre>
 #### `concatAll`
 `concatAll` takes in a multi-dimensional array and flattens it into a single-dimensional array.
-```javascript
+<pre>
 [[1], [2, 3], [], [4]].concatAll();
-```
+</pre>
 Note: `concatAll` is not available in native JavaScript.
 #### Example: Mouse Drag Collection
-```javascript
+<pre>
 const getElementDrags = elmt => elmt.mouseDowns
     .map(mouseDown => (
         // Think of takeUntil as filter, it maps a mouseDown
@@ -71,7 +71,7 @@ const getElementDrags = elmt => elmt.mouseDowns
     ))
     .concatAll();
 getElementDrags(image).forEach(pos => image.position = pos);
-```
+</pre>
 ### Events
 **Events and Arrays are both collections.**
 
@@ -79,20 +79,20 @@ Then why cannot we program them the same way?
 #### Iterator vs. Observer
 ##### How does iterator work?
 There are a PRODUCER and a CONSUMER. The consumer requests/**pulls** information one at a time from the producer until the producer has no item left.
-```javascript
+<pre>
 const iterator = [1, 2, 3].iterator();
 // Interface of an iterator
 console.log(iterator.next());
 // print: {value: 1, done: false}
-```
+</pre>
 Note: `map`, `filter` and `concatAll` can be implemented using an iterator.
 #### Observables & Observers
 The main usage of this deisgn pattern is building user interfaces. If you have a change to your data model, how do you communicate it with your views and visa versa?
-```javascript
+<pre>
 document.addEventListener(\\"mousemove\\", function(event) {
     console.log(event);
 });
-```
+</pre>
 The best example of this design pattern is **DOM events**: you can add a function to a data producer and instead of the consumer pulling the data out of the producer, the producer **pushes** the data to the consumers.
 #### Summary
 * Iterators and observables both **progressively** send information to the consumers.

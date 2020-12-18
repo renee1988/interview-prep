@@ -4,18 +4,18 @@ Example: Spell checker on a dictionary
 
 ## Bad implementation: static utility classes
 
-```java
+<pre>
 // Inappropriate use of static utility - inflexible and untestable
 public class SpellChecker {
     private static final Lexicon dictionary = ...;
     private SpellChecker() {}
     public static List<String> suggestions(String typo) {...}
 }
-```
+</pre>
 
 ## Bad implementation: singletons
 
-```java
+<pre>
 // Inappropriate use of singleton - inflexible and untestable
 public class SpellChecker {
     private static final Lexicon dictionary = ...;
@@ -23,7 +23,7 @@ public class SpellChecker {
     public static SpellChecker INSTANCE = new SpellChecker(...);
     public static List<String> suggestions(String typo) {...}
 }
-```
+</pre>
 
 ## Why are singletons and static utility classes bad?
 
@@ -34,7 +34,7 @@ To support multiple instances of the class, you can pass the resource into the c
 
 Example: SpellChecker, dictionary is a dependency injected into the spell checker when it is created.
 
-```java
+<pre>
 // Dependency injection provides flexibility and testability
 // You can mock the dictionary however you desire in your tests
 public class SpellChecker {
@@ -44,7 +44,7 @@ public class SpellChecker {
     }
     public List<String> suggestions(String typo) {...}
 }
-```
+</pre>
 
 * Dependency injection works with an arbitrary number of resources and arbitrary dependency graphs.
 * It preserves immutability, so multiple clients can share dependent objects.

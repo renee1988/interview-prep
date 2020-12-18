@@ -35,7 +35,7 @@ For example, if you have three functions performing three independent tasks, the
   - dynamic UIs: rich UI made up of several widgets on the page that interact with each other
   - service orchestration: orchestrate the execution of several business process that consumes several microservice, data mashups
 
-```javascript
+<pre>
 // Example: callback hell
 ajax(
     '<host1>/items',
@@ -47,7 +47,7 @@ ajax(
         });
     },
 );
-```
+</pre>
 
 #### Event Emitters
 Event emitter is a popular mechanism for asynchronous event-based architecture.
@@ -91,16 +91,16 @@ Definition of a **stream** traditionally is an abstract object related to I/O op
 Defintion of a **stream** in the Reactive Programming world is expanded to *any data source that can be consumed*.
 
 #### Propogation of Change
-```javascript
+<pre>
 let a = 20;
 let b = 22;
 let c = a + b; // c = 42
 a = 100;
 // c is still 42
-```
+</pre>
 The code above has no **propogation of change**.
 
-```javascript
+<pre>
 // Create A$ and B$, two data streams.
 const A$ = [20];
 const B$ = [22];
@@ -108,7 +108,7 @@ const C$ = A$.concat(B$).reduce(add);
 // C$ is a stream with values: [42]
 A$.push(100);
 // Now what values does C$ have?
-```
+</pre>
 If A$ receives a new value, this state is pushed through any streams that it's a part of.
 
 **Reactive programming is oriented around data flows and propogation.**

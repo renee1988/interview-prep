@@ -4,7 +4,7 @@ Static factories and constructors shared a limitation:
 **Telescoping constructor pattern** works, but it is hard to write client code when there are many parameters and harder still to read it.
 * Long sequences of identically typed parameters can cause subtle bugs
 
-```
+<pre>
 // Example: telescoping constructor
 public class SomeClass {
     private final int a;
@@ -25,7 +25,7 @@ public class SomeClass {
         this(a, b, c, d, e, f);
     }
 }
-```
+</pre>
 
 **JavaBeans pattern**: you can call a parameterless constructor to create the object and then call setter methods to set each required parameter and each optional parameter of interest.
 * It allows inconsistency, mandates mutability.
@@ -35,7 +35,7 @@ public class SomeClass {
 ## Builder Pattern
 Combining the safety of telescoping constructor pattern with the readability of JavaBeans pattern → **Builder**.
 
-```java
+<pre>
 // Builder pattern
 public class SomeClass {
     private final int a;
@@ -79,13 +79,13 @@ public class SomeClass {
         f = builder.f;
     }
 }
-```
+</pre>
 
 * The builder pattern simulates named optional parameters.
 * The builder pattern is well suited to class hierarchies.
   * Abstract classes have abstract builders, concrete classes have concrete builders.
 
-```java
+<pre>
 public abstract class Pizza {
     public enum Topping { HAM, MUSHROOM, ONION, PEPPER, SAUSAGE }
     final Set<Topping> toppings;
@@ -105,12 +105,12 @@ public abstract class Pizza {
         toppings = builder.toppings.clone();
     }
 }
-```
+</pre>
 
 Note: Pizza.Builder is a generic type with a recursive type parameter .
 * Along with abstract self method, allows method chaining to work properly in subclasses without casting
 
-```java
+<pre>
 public class NyPizza extends Pizza {
     public enum Size { SMALL, MEDIUM, LARGE }
     private final Size size;
@@ -136,7 +136,7 @@ public class NyPizza extends Pizza {
         size = builder.size;
     }
 }
-```
+</pre>
 
 A subclass method is declared to return a subtype of the return type declared in the superclass → **covariant return typing**.
 

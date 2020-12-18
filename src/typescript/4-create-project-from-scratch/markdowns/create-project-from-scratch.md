@@ -2,7 +2,7 @@
 
 ## Step 1 - Create a folder
 
-```shell
+<pre>
 \\# Create a new folder
 mkdir my-lib
 cd my-lib
@@ -16,25 +16,25 @@ npx gitignore node
 \\# Create a starting-point package.json
 \\# Answer \\"yes\\" to all the question promoted
 yarn init --yes
-```
+</pre>
 
 The following is the output `package.json` file:
 
-```json
+<pre>
 {
   "name": "my-lib",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT"
 }
-```
+</pre>
 
 ## Step 2 - Modify package.json
 
 1. `main` is the entry point of your library. We want to modify it to point to `dist/index.js`.
 2. Add scripts/commands
 
-```json
+<pre>
 {
   "name": "my-lib",
   "version": "1.0.0",
@@ -55,10 +55,10 @@ The following is the output `package.json` file:
       "test": "jest"
   }
 }
-```
+</pre>
 
 ## Step 3 - Install dependencies
 
-```shell
+<pre>
 yarn add -D typescript eslint jest
-```
+</pre>

@@ -12,15 +12,15 @@ Otherwise use unchecked exceptions.
 * The easist way to eliminate checked exceptions is to **return an optional of the desired result type**. The shortcoming of this solution is that you can't provide additional details on why it fails perform the desired computation.
 
 * You can always turn a checked exception into an unchecked exception. 
-```java
+<pre>
 // Invocation with checked exception
 try {
     // ...
 } catch(SomeCheckedException e) {
     // ...
 }
-```
-```java
+</pre>
+<pre>
 // Invocation with state-testing method and unchecked exception
 if (someConditionCheck) {
     fn();
@@ -30,7 +30,7 @@ if (someConditionCheck) {
 // Alternative: if the programmer knows the call will succeed, or
 // is content to let the thread terminate if it fails:
 fn();
-```
+</pre>
 
 ## Summary
 * If callers won't be able to recover from failures, throw unchecked exceptions.

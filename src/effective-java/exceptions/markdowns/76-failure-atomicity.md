@@ -11,7 +11,7 @@ An object should be in a well-defined usable state after it throws an exception.
 
 2. For mutable objects, design the mutation methods in the way that it always check parameters for validity before performing the operation.
 * This will let most exceptions to get thrown before the object modification commences.
-```java
+<pre>
 // Pop operation on an array
 public Object pop() {
     if (this.size == 0) {
@@ -21,7 +21,7 @@ public Object pop() {
     elements[this.size] = null;
     return result;
 }
-```
+</pre>
 If we do not validate the `size` field first, the exception will still be thrown but the `size` field will be left out in a bad state, causing all the future method invocations on the object to fail.
 
 3. For method parameters that cannot be checked/validated, order the computation before any modification to the object takes place.

@@ -14,7 +14,7 @@ To make a class immutable:
   * If your class has any fields that refer to mutable objects, ensure that clients of the class cannot obtain references to these objects.
   * Make defensive copies in constructors, accessors and readObject methods.
 
-```java
+<pre>
 // Example: immutable class
 public final class Complex {
     private final double re;
@@ -26,7 +26,7 @@ public final class Complex {
         return new Complex(re + c.re, im + c.im)
     }
 }
-```
+</pre>
 
 * Immutable objects are simple, it can be in only one state.
 * **Immutable objects are inherently thread-safe, they require no synchronization**.

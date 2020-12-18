@@ -13,7 +13,7 @@ Every errorneous method invocation boils down to an illegal argument or state.
 `IllegalArgumentException` is the exception to throw when the caller passes in an argument whose vlaue is **inapproporiate**.
 
 Example:
-```java
+<pre>
 public SomeClass {
     // ...
     public static divide(int divider) {
@@ -23,7 +23,7 @@ public SomeClass {
         // ...
     }
 }
-```
+</pre>
 
 ### `IllegalStateException`
 `IllegalStateException` is thrown if the invocation is illegal because of the state of the receiving object.

@@ -9,7 +9,7 @@ There are three kinds of throwables:
 
 By throwing a checked exception, you force the caller to handle the exception in a `catch` clause or to propagate it outward.
 
-```java
+<pre>
 public class SomeClass {
   // ...
   // ...
@@ -17,7 +17,7 @@ public class SomeClass {
       // ...
   }
 }
-```
+</pre>
 
 With a checked exception, the API designer presents a mandate to recover from the condition.
 * User can choose to disregard the mandate by catching the exception and ignoring it, which is usually *a bad idea*.

@@ -19,34 +19,34 @@ Observables can model:
 
 ### Events to observables
 We need to take all of these async APIs (e.g., DOM events) and adapt them into Observables.
-```javascript
+<pre>
 // fromEvent takes a DOM object and a DOM event and adapt them into an Observable
 const mouseMoves = Observable.fromEvent(element, "mousemove");
-```
+</pre>
 
 ### Event subscription
-```javascript
+<pre>
 // Subscribe in the traditional way
 const handler = (event) => console.log(event);
 document.addEventListener("mousemove", handler);
 // Unsubscribe in the tranditional way
 document.removeEventListener("mousemove", handler);
-```
+</pre>
 
 Use `Obserable.forEach`:
-```javascript
+<pre>
 // Subscribe
 const subscription = mouseMoves.forEach(console.log);
 // Unsubscribe
 subscription.dispose();
-```
+</pre>
 Note: the difference between `Obserable.forEach` and `Array.forEach` is `Obserable.forEach` returns a subscription object.
 * Each iteration of `Array.forEach` completes synchronously (immediately). `Array.forEach` runs through the entire array with the given callback function and then **finish**.
 * Observable is a collection that arrives **over time**. When you `forEach` over an `Observable`, as the items arrive over time, the callback function gets invoked.
 * When you do not care about the data from the `Observable` any more, you need a way to unsubscribe to the `Observable`.
 
 Expanded `Observable.forEach`:
-```javascript
+<pre>
 const subscription = mouseMoves.forEach(
     // Observer object
     {
@@ -58,7 +58,7 @@ const subscription = mouseMoves.forEach(
         onCompleted: () => console.log("done!")
     }
 );
-```
+</pre>
 
 ### Observable metaphor
 The fundatmental difference between Observable & Observer and Iterator patterns is **who is in control**.
@@ -66,7 +66,7 @@ The fundatmental difference between Observable & Observer and Iterator patterns 
 * is the pusher in control -> Observable & observer, the producer is in control.
 
 ### Converting events to observables
-```javascript
+<pre>
 Observale.fromEvent = function(domElement, eventName) {
     // returning Observable object
     return {
@@ -81,20 +81,22 @@ Observale.fromEvent = function(domElement, eventName) {
         }
     };
 };
-```
+</pre>
 
 ## Flatten an Observable of Observables
 Assume and use `{...}` to present an Observable for now:
+<pre>
 {
     ...{1},
     .........{2................3},
     ...................{},
     ..............{4},
 }
+</pre>
 
 ### `concatAll`
 `concatAll` strategy is to always make sure that the elements come out in the order of the collections they are inside of. It is consistent with `Array.concat`, it goes from top to bottom, left to right.
-
+<pre>
 {
     ...{1},
     .........{2................3},
@@ -104,6 +106,7 @@ Assume and use `{...}` to present an Observable for now:
 
 Outcome:
 ---> {...1.........2................3...4}
+</pre>
 
 **Cold Observable**: a cold observable will not do anything until somone calls `forEach` on it. The above example is a Cold Observable.
 **Hot Observable**: e.g., mousemove events, a hot data source, it is going whether you are listening or not.
@@ -117,7 +120,7 @@ If there is an error happened between 2 and 3 in the above example, the resultin
 
 ### `takeUntil`
 `takeUntil` takes in two observables: source observable and stop observable, then creates a new observable.
-```
+<pre>
        1      2                  3
 -------x------x------------------x----------
                       4
@@ -125,7 +128,7 @@ If there is an error happened between 2 and 3 in the above example, the resultin
 Result:
        1      2                  
 -------x------x--------
-```
+</pre>
 
 Every time when the source observable emits data, `takeUntil` forwards it on, but as soon as the stop observable emits **the first value** or errors out, it completes the new observable.
 Under the hood, it calls `dispose` to unsubscribe on both the source observable and the stop observable.
