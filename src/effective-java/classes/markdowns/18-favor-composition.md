@@ -8,7 +8,7 @@ Inheriting from ordinary concrete classes across package boundaries is dangerous
 ## Example: `HashSet` extension
 Suppose that we need a way to query the HashSet as to how many elements have been added since it is created.
 
-<pre>
+```java
 // Broken - Inapproporiate use of inheritance
 public class InstrumentedHashSet<E> extends HashSet<E> {
     private int addCount = 0;
@@ -32,7 +32,7 @@ InstrumentedHashSet<String> s = new InstrumentedHashSet<>();
 s.addAll(List.of("A", "B", "C"));
 // addCount is 6 instead of 3, since HashSet's addAll method is implemented
 // on top of its add method.
-</pre>
+```
 
 We can "fix" `InstrumentedHashSet` by eliminating its override of the `addAll` method. This self-use is an implementation detail, not guaranteed to hold in all implementations of all Java platform and subject to change from release to release → the resulting `InstrumentedHashSet` is fragile.
 
@@ -48,7 +48,7 @@ This approach is broken into two pieces:
 * the class itself
 * a reusable forwarding class that contains all of the forwarding methods
 
-<pre>
+```java
 // Wrapper class - uses composition in place of inheritance
 public class InstrumentedSet<E> extends ForwardingSet<E> {
     private int addCount = 0;
@@ -83,16 +83,16 @@ public class ForwardingSet<E> implements Set<E> {
     }
     //...
 }
-</pre>
+```
 
 In essence, `InstrumentedSet` transforms one `Set` into another, adding the instrumentation functionality.
 * Inheritance-based approach only works for a single concrete class and requires a separate constructor for each supported constructor in the superclass.
 * The wrapper class can be used to instrument any `Set` implementation and will work in conjunction with any preexisting constructor.
 
-<pre>
+```java
 Set<A> a = new InstrumentedSet<>(new TreeSet<>(...));
 Set<B> b = new InstrumentedSet<>(new HashSet<>(...));
-</pre>
+```
 
 `InstrumentedSet` is a wrapper class → each `InstrumentedSet` instance contains (wraps) another `Set` instance → **Decorator pattern** → `InstrumentedSet` class “decorates” a set of by adding instrumentation.
 
