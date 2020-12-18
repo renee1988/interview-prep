@@ -62,7 +62,7 @@ function handleResponse(file, content) {
         responses.set(file, content);
     }
     const files = [“file1“, “file2“, “file3“];
-    for (let i = 0; i < files.length; i++) {
+    for (let i = 0; i  files.length; i++) {
         if (!responses.has(files[i])) {
             return;
         }
