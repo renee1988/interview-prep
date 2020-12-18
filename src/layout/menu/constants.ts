@@ -102,6 +102,13 @@ const jsFundamentalsMenu: Array<MenuConfig> = [
     },
 ];
 
+const infrastructureMenu: Array<MenuConfig> = [
+    {
+        displayName: 'Google Cloud Platform',
+        route: 'gcp',
+    },
+];
+
 export const MENUS: Array<MenuConfig> = [
     {
         displayName: 'Algorithms',
@@ -137,5 +144,10 @@ export const MENUS: Array<MenuConfig> = [
         displayName: 'TypeScript',
         route: 'interview-prep/typescript',
         subMenu: typescriptMenu,
+    },
+    {
+        displayName: 'Infrastructure',
+        route: 'interview-prep/infrastructure',
+        subMenu: infrastructureMenu,
     },
 ];

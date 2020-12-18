@@ -17,6 +17,7 @@ import { ObjectCreationAndDestruction } from './effective-java/objects';
 import { ClassesAndInterfaces } from './effective-java/classes';
 import { Basics } from './async-js/basics';
 import { Generics } from './effective-java/generics';
+import { GCP } from './infrastructure/gcp';
 
 function App() {
   return (
@@ -94,6 +95,11 @@ function App() {
               exact
               path="/interview-prep/js-fundamentals/event-loop"
               component={EventLoop}
+            />
+            <Route
+              exact
+              path="/interview-prep/infrastructure/gcp"
+              component={GCP}
             />
           </Switch>
         </div>
