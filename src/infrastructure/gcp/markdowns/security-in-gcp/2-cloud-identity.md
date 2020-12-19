@@ -56,7 +56,6 @@ If you are already using Microsoft Active Directory on-premises and want that se
 Managed Service for Microsoft Active Directory allows you to create the right architecture for your domain.
 
 Factors to consider are:
-
 - Alignment with existing security zones:
   - In Microsoft AD environment, networks are often segmented into several security zones.
   - These security zones are based on interations required to securely run applications and move data between applications.

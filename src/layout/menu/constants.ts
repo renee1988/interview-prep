@@ -46,10 +46,10 @@ const asyncJsMenu: Array<MenuConfig> = [
     },
 ];
 
-const webPerfMenu: Array<MenuConfig> = [
+const webFundamentalsMenu: Array<MenuConfig> = [
     {
-        displayName: 'Event loop',
-        route: 'event-loop',
+        displayName: 'Web Security',
+        route: 'security',
     },
 ];
 
@@ -119,9 +119,9 @@ export const MENUS: Array<MenuConfig> = [
         subMenu: jsFundamentalsMenu,
     },
     {
-        displayName: 'Web Basics',
+        displayName: 'Web Fundamentals',
         route: 'interview-prep/web-fundamentals',
-        subMenu: webPerfMenu,
+        subMenu: webFundamentalsMenu,
     },
     {
         displayName: 'Java Best Practices',

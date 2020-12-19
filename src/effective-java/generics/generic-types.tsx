@@ -3,13 +3,13 @@ import React from 'react';
 
 import {ExpandableSection} from '../../components/expandable-section';
 
-const genericMethodsMd = require("./markdowns/29-generic-methods.md");
+const genericTypesMd = require("./markdowns/29-generic-types.md");
 
-export const GenericMethods = () => (
+export const GenericTypes = () => (
     <article>
-        <ExpandableSection title="Favor generic methods">
+        <ExpandableSection title="Favor generic types">
             <div style={{padding: '1rem 2rem'}}>
-                <Markdown>{genericMethodsMd}</Markdown>
+                <Markdown>{genericTypesMd}</Markdown>
             </div>
         </ExpandableSection>
     </article>

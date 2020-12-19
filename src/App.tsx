@@ -15,6 +15,7 @@ import { Generics } from './effective-java/generics';
 import { GCP } from './infrastructure/gcp';
 import { ProductionReadyTypeScript } from './typescript/production-ready';
 import { EffectiveTypeScript } from './typescript/effective-typescript';
+import { WebSecurity } from './web-fundamentals/web-security';
 
 function App() {
   return (
@@ -82,6 +83,11 @@ function App() {
               exact
               path="/interview-prep/infrastructure/gcp"
               component={GCP}
+            />
+            <Route
+              exact
+              path="/interview-prep/web-fundamentals/security"
+              component={WebSecurity}
             />
           </Switch>
         </div>
