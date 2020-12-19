@@ -14,6 +14,7 @@ import { Basics } from './async-js/basics';
 import { Generics } from './effective-java/generics';
 import { GCP } from './infrastructure/gcp';
 import { ProductionReadyTypeScript } from './typescript/production-ready';
+import { EffectiveTypeScript } from './typescript/effective-typescript';
 
 function App() {
   return (
@@ -60,7 +61,12 @@ function App() {
             <Route
               exact
               path="/interview-prep/typescript"
-              component={ProductionReadyTypeScript}
+              component={EffectiveTypeScript}
+            />
+            <Route
+              exact
+              path="/interview-prep/typescript/best-practices"
+              component={EffectiveTypeScript}
             />
             <Route
               exact

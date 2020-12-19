@@ -74,6 +74,10 @@ const effectiveJavaMenu: Array<MenuConfig> = [
 
 const typescriptMenu: Array<MenuConfig> = [
     {
+        displayName: 'TypeScript Best Practices',
+        route: 'best-practices',
+    },
+    {
         displayName: 'Production Ready TypeScript',
         route: 'production-ready',
     },
