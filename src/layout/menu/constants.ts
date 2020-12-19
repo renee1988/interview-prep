@@ -51,6 +51,10 @@ const webFundamentalsMenu: Array<MenuConfig> = [
         displayName: 'Web Security',
         route: 'security',
     },
+    {
+        displayName: 'Web Performance',
+        route: 'performance',
+    },
 ];
 
 const effectiveJavaMenu: Array<MenuConfig> = [

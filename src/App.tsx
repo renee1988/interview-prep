@@ -16,6 +16,7 @@ import { GCP } from './infrastructure/gcp';
 import { ProductionReadyTypeScript } from './typescript/production-ready';
 import { EffectiveTypeScript } from './typescript/effective-typescript';
 import { WebSecurity } from './web-fundamentals/web-security';
+import { WebPerformance } from './web-fundamentals/web-performance';
 
 function App() {
   return (
@@ -88,6 +89,11 @@ function App() {
               exact
               path="/interview-prep/web-fundamentals/security"
               component={WebSecurity}
+            />
+            <Route
+              exact
+              path="/interview-prep/web-fundamentals/performance"
+              component={WebPerformance}
             />
           </Switch>
         </div>
