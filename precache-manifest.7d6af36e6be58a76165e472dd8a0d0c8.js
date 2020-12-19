@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b68137c384cb1d64aef042a732acbce4",
+    "revision": "3e20fcf8f0a6e7804f815a50f8efd337",
     "url": "/interview-prep/index.html"
   },
   {
-    "revision": "4a6b913da465c5b5a584",
+    "revision": "f2f09e3672353da36782",
     "url": "/interview-prep/static/css/main.647ead8c.chunk.css"
   },
   {
-    "revision": "253cb0fbc46ec83f3046",
-    "url": "/interview-prep/static/js/2.00e75467.chunk.js"
+    "revision": "80a0f29a7b595195f14f",
+    "url": "/interview-prep/static/js/2.74611192.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/interview-prep/static/js/2.00e75467.chunk.js.LICENSE.txt"
+    "url": "/interview-prep/static/js/2.74611192.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4a6b913da465c5b5a584",
-    "url": "/interview-prep/static/js/main.ec28f027.chunk.js"
+    "revision": "f2f09e3672353da36782",
+    "url": "/interview-prep/static/js/main.c2772d84.chunk.js"
   },
   {
     "revision": "8f19c75d9935a744b5f3",
     "url": "/interview-prep/static/js/runtime-main.5c3ca30f.js"
+  },
+  {
+    "revision": "0d199723c04017950ff1a6eda52eb671",
+    "url": "/interview-prep/static/media/effective-type-item-1-1.0d199723.jpg"
   },
   {
     "revision": "e82778dfbb3b521d27344e6f6e632d27",
