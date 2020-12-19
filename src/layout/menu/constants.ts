@@ -74,24 +74,8 @@ const effectiveJavaMenu: Array<MenuConfig> = [
 
 const typescriptMenu: Array<MenuConfig> = [
     {
-        displayName: 'Overview',
-        route: 'overview',
-    },
-    {
-        displayName: 'Latest TypeScript Features',
-        route: 'latest-typescript-features',
-    },
-    {
-        displayName: 'App vs. Library Concerns',
-        route: 'app-vs-library-concerns',
-    },
-    {
-        displayName: 'Create Project from Scratch',
-        route: 'create-project-from-scratch',
-    },
-    {
-        displayName: 'Declaration files',
-        route: 'declaration-files',
+        displayName: 'Production Ready TypeScript',
+        route: 'production-ready',
     },
 ];
 

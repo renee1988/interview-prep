@@ -8,16 +8,12 @@ import {MENUS} from './layout/menu/constants';
 import {RxJs} from './async-js/rx-js';
 import { Exceptions } from './effective-java/exceptions';
 import { EventLoop } from './js-fundamentals/event-loop';
-import { Overview } from './typescript/1-overview';
-import { LatestTypescriptFeatures } from './typescript/2-latest-typescript-features';
-import { AppVsLibraryConcerns } from './typescript/3-app-vs-library-concerns';
-import { CreateProjectFromScratch } from './typescript/4-create-project-from-scratch';
-import { DeclarationFiles } from './typescript/5-declaration-files';
 import { ObjectCreationAndDestruction } from './effective-java/objects';
 import { ClassesAndInterfaces } from './effective-java/classes';
 import { Basics } from './async-js/basics';
 import { Generics } from './effective-java/generics';
 import { GCP } from './infrastructure/gcp';
+import { ProductionReadyTypeScript } from './typescript/production-ready';
 
 function App() {
   return (
@@ -64,32 +60,12 @@ function App() {
             <Route
               exact
               path="/interview-prep/typescript"
-              component={Overview}
+              component={ProductionReadyTypeScript}
             />
             <Route
               exact
-              path="/interview-prep/typescript/overview"
-              component={Overview}
-            />
-            <Route
-              exact
-              path="/interview-prep/typescript/latest-typescript-features"
-              component={LatestTypescriptFeatures}
-            />
-            <Route
-              exact
-              path="/interview-prep/typescript/app-vs-library-concerns"
-              component={AppVsLibraryConcerns}
-            />
-            <Route
-              exact
-              path="/interview-prep/typescript/create-project-from-scratch"
-              component={CreateProjectFromScratch}
-            />
-            <Route
-              exact
-              path="/interview-prep/typescript/declaration-files"
-              component={DeclarationFiles}
+              path="/interview-prep/typescript/production-ready"
+              component={ProductionReadyTypeScript}
             />
             <Route
               exact
