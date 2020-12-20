@@ -48,6 +48,10 @@ const asyncJsMenu: Array<MenuConfig> = [
 
 const webFundamentalsMenu: Array<MenuConfig> = [
     {
+        displayName: 'HTTP2',
+        route: 'http2',
+    },
+    {
         displayName: 'Web Security',
         route: 'security',
     },

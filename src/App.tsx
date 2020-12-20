@@ -17,6 +17,7 @@ import { ProductionReadyTypeScript } from './typescript/production-ready';
 import { EffectiveTypeScript } from './typescript/effective-typescript';
 import { WebSecurity } from './web-fundamentals/web-security';
 import { WebPerformance } from './web-fundamentals/web-performance';
+import { HTTP2 } from './web-fundamentals/http2';
 
 function App() {
   return (
@@ -94,6 +95,11 @@ function App() {
               exact
               path="/interview-prep/web-fundamentals/performance"
               component={WebPerformance}
+            />
+            <Route
+              exact
+              path="/interview-prep/web-fundamentals/http2"
+              component={HTTP2}
             />
           </Switch>
         </div>
