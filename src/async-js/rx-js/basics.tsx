@@ -7,6 +7,8 @@ const buildingBlocksMd = require("./markdowns/basics/1-building-blocks.md");
 const observablesMd = require("./markdowns/basics/2-observables.md");
 const mouseDragsExampleMd = require("./markdowns/basics/3-mouse-drags-example.md");
 const moreOperatorsMd = require("./markdowns/basics/4-more-operators.md");
+const netflixSearchExampleMd = require("./markdowns/basics/5-netflix-example.md");
+const threeDimensionalObservablesMd = require("./markdowns/basics/6-three-dimensional-collection.md");
 
 export const Basics = () => (
     <article>
@@ -22,6 +24,12 @@ export const Basics = () => (
             </div>
             <div style={{padding: '1rem 2rem'}}>
                 <Markdown>{moreOperatorsMd}</Markdown>
+            </div>
+            <div style={{padding: '1rem 2rem'}}>
+                <Markdown>{netflixSearchExampleMd}</Markdown>
+            </div>
+            <div style={{padding: '1rem 2rem'}}>
+                <Markdown>{threeDimensionalObservablesMd}</Markdown>
             </div>
         </ExpandableSection>
     </article>
