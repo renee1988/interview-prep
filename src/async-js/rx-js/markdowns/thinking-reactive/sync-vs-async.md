@@ -114,4 +114,49 @@ If A$ receives a new value, this state is pushed through any streams that it's a
 **Reactive programming is oriented around data flows and propogation.**
 
 In the example above, C$ is an always-on varaible that *reacts* to any change and causes actions to ripple through it when any constituent part changes.
- 
+_______________________________________________________________________________
+### Stream breakdown view
+
+<img style="width:80%" src="./thinking-reactively-1.jpg">
+
+* Data source = producer
+  * DOM events: mouse clicks, key presses, etc.
+  * Network requests
+* Consumer = subscribers of the data source
+
+**A stream is nothing more than a sequence of events over time.**
+* A stream can be applied to ANY data point that holds value, from a single integer to bytes of data received from a remote HTTP call.
+* A stream stays idel/does nothing until there is a subscriber (or observer) that listens for it.
+  * streams are **lazy** data types.
+  * different from `Promise` since it executes its operations as soon as they are created.
+* The data pipeline shown above consists of a list of RxJS operators to transfor the values from the data sources into the desired form and pass to the observers.
+
+### Static data sources
+Static data sources include: numbers, strings, sequences and arrays.
+```javascript
+Stream([1, 2, 3, 4, 5])
+  .filter(num => (num % 2) === 0)
+  .map(num => num * num)
+  .subscribe(val => {
+    console.log(val);
+  });
+// Outputs: 4, 16
+```
+* `Stream([1, 2, 3, 4, 5])` is the data source.
+* `filter` and `map` are the data operators in the data pipeline.
+
+### Components of an Rx stream
+* Producer
+* Consumer
+* Data pipeline
+* Time
+
+#### Producers
+Producers are the source of your data. A producer is the starting point for any logic that you will perform in RxJS.
+* A producer is created from something that generates events independently, anything from a signle value, an array, mouse clicks, to a stream of bytes read from a file.
+* A producer is the *subject* in Observer design pattern.
+* A producer is referred to as `Observable` in RxJS, something that can be observed.
+* An observable is in charge of pushing notifications, *fire-and-forget*.
+
+#### Consumers
+A consumer accepts events from the producer and prcess them. When a consumer begins listening to the producer for events to consume, the stream is activiated, meaning the stream (the producer) starts pushing events.
