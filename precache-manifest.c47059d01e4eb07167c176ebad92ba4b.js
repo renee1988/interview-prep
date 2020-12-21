@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e62ae1c1fdaa632ca17775555ea2d107",
+    "revision": "d45101b094e895fa5b552e7c15061adc",
     "url": "/interview-prep/index.html"
   },
   {
-    "revision": "15c094bcfa8f4febc3f7",
+    "revision": "0cd95a958c75a29919fb",
     "url": "/interview-prep/static/css/main.647ead8c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/interview-prep/static/js/2.725c4149.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "15c094bcfa8f4febc3f7",
-    "url": "/interview-prep/static/js/main.0a30b517.chunk.js"
+    "revision": "0cd95a958c75a29919fb",
+    "url": "/interview-prep/static/js/main.e68829b3.chunk.js"
   },
   {
     "revision": "8f19c75d9935a744b5f3",
@@ -34,6 +34,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e82778dfbb3b521d27344e6f6e632d27",
     "url": "/interview-prep/static/media/promise-doodle.e82778df.jpg"
+  },
+  {
+    "revision": "5d4d3e7b9ebf856c473a5406f15a6c95",
+    "url": "/interview-prep/static/media/thinking-reactively-1.5d4d3e7b.jpg"
   },
   {
     "revision": "d9a6475b8fa4a0a5f2d214e344e87186",
