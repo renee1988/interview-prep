@@ -13,9 +13,9 @@ export const SecurityInGCP = () => (
             <div style={{padding: '1rem 2rem 0rem 2rem'}}>
                 <Markdown>{overviewMd}</Markdown>
             </div>
-            <div style={{padding: '1rem 2rem 0rem 2rem'}}>
+            {/* <div style={{padding: '1rem 2rem 0rem 2rem'}}>
                 <Markdown>{cloudIdentityMd}</Markdown>
-            </div>
+            </div> */}
             {/* <div style={{padding: '1rem 2rem 0rem 2rem'}}>
                 <Markdown>{iamMd}</Markdown>
             </div> */}

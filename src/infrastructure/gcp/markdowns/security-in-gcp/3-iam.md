@@ -1,5 +1,5 @@
 _______________________________________________________________________________
-## Overview
+## IAM Overview
 IAM (Identity and Access Management) allows administrators *authorize* who can take action on specific resources.
 * giving the administrator fully control and visibility to manage their cloud resources centrally
 * centrally manage your projects, folders and organizations
