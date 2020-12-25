@@ -79,6 +79,60 @@ All VPCs have 2 implied firewall rules:
 
 In GCP, all projects get a default VPC created automatically. In additional to the implied rules above and auto-generated VPC, the network is pre-populated with follow rules that allow incoming traffic to instances:
 * **`default-allow-internal`** enables incoming connections within the VPC network for all protocols and ports *between instances*. In other words, the rule permits inbound connections between VM instances in the same network.
-* **`default-allow-ssh`**
-* **`default-allow-rdp`**
-* **`default-allow-icmp`**
+* **`default-allow-ssh`** allows port 22, secure shell, or SSH
+* **`default-allow-rdp`** allows port 3389, Remote Desktop Protocol (RDP)
+* **`default-allow-icmp`** allows ICMP traffic from any source IP to any destination instance within the VPC network.
+
+### VPC Firewall Best Practices
+There is some network traffic that is always blocked on VPC networks. This traffic cannot be unblocked with firewall rules. The traffic that is always blocked is all GRE traffic, *unless explicitly allowed through protocol forwarding*.
+<table>
+    <th>Blocked Traffic</th>
+    <th>Applies to</th>
+    <tr>
+        <td>GRE traffic</td>
+        <td>all sources, all destinations, including among instances using internal IP addresses, unless explicitly allowed through <i>protocol forwarding</i></td>
+    </tr>
+    <tr>
+        <td>Protocal other than TCP, UDP, ICMP and IPIP</td>
+        <td>
+            Traffic between:
+            <ul>
+                <li>instances and the internet</li>
+                <li>instances if they are addressed with external IP addresses</li>
+                <li>instances if a load balancer with an external IP address is involved</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Egress traffic on TCP port 25 (SMTP)</td>
+        <td>
+            Traffic from:
+            <ul>
+                <li>instances to the internet</li>
+                <li>instances to other instances addressed by external IP addresses</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Egress traffic on TCP port 465 or 587 (SMTP over SSL/TLS)</td>
+        <td>
+            Traffic from:
+            <ul>
+                <li>instances to the internet, except for traffic destined for know Google SMTP servers</li>
+                <li>instances to other instances addressed by external IP addresses</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+#### Best practices to secure instances running in GCE
+1. Keep your firewall rule inline with the model of least privilege, create rules to explicitly allow only the traffic necessary for your applications to communicate.
+2. Minimize direct exposure tot the internet. Avoid having firewall rules defined within the source or destination range set to **0.0.0.0/0**.
+3. Prevent port and protocols from being exposed accidentally. Create a firewall rule with the lowest priority that blocks all outbound traffic for all protocols and ports.
+  * This rule will override the implied egress rule that allows all outbound traffic, thereby will lock down your GCE instance from making connections.
+  * Then you can create higher priority firewall rules to specify GCE instances to open required ports and protocols.
+4. Adopt a standard naming convention for firewall rules.
+For example, `{direction}-{allow/deny}-{service}-{to-from-location}`.
+* `ingress-allow-ssh-from-onprem`
+* `egress-allow-all-to-gcevms`
+5. Consider service account firewall rules instead of tag-based rules. The reason for this is that tag-based firewall rules can be applied by any user who has GCE instance admin role, but a service account requires a user to have explicit Cloud IM rights to be used.
