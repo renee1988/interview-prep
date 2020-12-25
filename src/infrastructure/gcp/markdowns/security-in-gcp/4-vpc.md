@@ -67,3 +67,18 @@ GCP firewall rules are **STATEFUL**. For each initiated connection that is track
 </table>
 
 ### VPC Firewall Defaults
+All VPCs have 2 implied firewall rules:
+* Allow all outgoing traffic to any IP address:
+  * action is *allow*
+  * destination is *0.0.0.0/0*
+  * lowest priority: 65535
+* Block all incoming traffic:
+  * action is *deny*
+  * source is *0.0.0.0/0*
+  * lowest priority: 65535
+
+In GCP, all projects get a default VPC created automatically. In additional to the implied rules above and auto-generated VPC, the network is pre-populated with follow rules that allow incoming traffic to instances:
+* **`default-allow-internal`** enables incoming connections within the VPC network for all protocols and ports *between instances*. In other words, the rule permits inbound connections between VM instances in the same network.
+* **`default-allow-ssh`**
+* **`default-allow-rdp`**
+* **`default-allow-icmp`**
