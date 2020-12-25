@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "820c3e5483b6327c8256358dd54bbac8",
+    "revision": "c7aadabfeab98ede3d65d9512011d742",
     "url": "/interview-prep/index.html"
   },
   {
-    "revision": "f94f1530dfda694a0c3b",
+    "revision": "0a1916069bd5601b30af",
     "url": "/interview-prep/static/css/main.647ead8c.chunk.css"
   },
   {
-    "revision": "484aa18506f3cd573446",
-    "url": "/interview-prep/static/js/2.725c4149.chunk.js"
+    "revision": "a4e07336a610a5cc4276",
+    "url": "/interview-prep/static/js/2.483389b4.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/interview-prep/static/js/2.725c4149.chunk.js.LICENSE.txt"
+    "url": "/interview-prep/static/js/2.483389b4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f94f1530dfda694a0c3b",
-    "url": "/interview-prep/static/js/main.f8bafb82.chunk.js"
+    "revision": "0a1916069bd5601b30af",
+    "url": "/interview-prep/static/js/main.00315951.chunk.js"
   },
   {
     "revision": "8f19c75d9935a744b5f3",
@@ -38,6 +38,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5d4d3e7b9ebf856c473a5406f15a6c95",
     "url": "/interview-prep/static/media/thinking-reactively-1.5d4d3e7b.jpg"
+  },
+  {
+    "revision": "02c7d43908104d45f46d038a9a3af8d6",
+    "url": "/interview-prep/static/media/vpc-1.02c7d439.jpg"
+  },
+  {
+    "revision": "d644e78b0fa0b87c6fa934b991daf05d",
+    "url": "/interview-prep/static/media/vpc-2.d644e78b.jpg"
   },
   {
     "revision": "d9a6475b8fa4a0a5f2d214e344e87186",
