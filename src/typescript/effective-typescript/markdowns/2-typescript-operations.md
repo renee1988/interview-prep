@@ -1,4 +1,4 @@
-## Know Which TypeScript Options You Are Using
+## TypeScript Configurations
 <pre>
 {
     "compileOptions": {
