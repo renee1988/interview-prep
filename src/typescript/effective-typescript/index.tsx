@@ -1,4 +1,5 @@
 import React from 'react';
+import { Any } from './any';
 import { CodeGen } from './code-gen';
 import { ConfigurationOptions } from './configuration-options';
 import { JsAndTsRelationship } from './js-and-ts-relationship';
@@ -9,5 +10,6 @@ export const EffectiveTypeScript = () => (
         <ConfigurationOptions />
         <CodeGen />
         <StructuralTyping />
+        <Any />
     </article>
 );
