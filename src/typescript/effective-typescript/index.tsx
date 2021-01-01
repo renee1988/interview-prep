@@ -3,6 +3,7 @@ import { Any } from './any';
 import { CodeGen } from './code-gen';
 import { ConfigurationOptions } from './configuration-options';
 import { JsAndTsRelationship } from './js-and-ts-relationship';
+import { Spaces } from './spaces';
 import { StructuralTyping } from './structural-typing';
 import { TypesAsSetsOfValues } from './types-as-sets-of-values';
 import { UseYourEditor } from './use-your-editor';
@@ -15,5 +16,6 @@ export const EffectiveTypeScript = () => (
         <Any />
         <UseYourEditor />
         <TypesAsSetsOfValues />
+        <Spaces />
     </article>
 );
