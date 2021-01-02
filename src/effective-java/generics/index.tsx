@@ -6,6 +6,7 @@ import { PreferLists } from './prefer-lists';
 import { GenericMethods } from './generic-methods';
 import { BoundedWildcards } from './bounded-wildcards';
 import { CombineGenericsAndVarargs } from './combine-generics-and-varargs';
+import { TypesafeHeterogeneousContainers } from './typesafe-heterogeneous-containers';
 
 export const Generics = () => (
     <article style={{display: 'grid', rowGap: '1.5rem'}}>
@@ -16,5 +17,6 @@ export const Generics = () => (
         <GenericMethods />
         <BoundedWildcards />
         <CombineGenericsAndVarargs />
+        <TypesafeHeterogeneousContainers />
     </article>
 );
