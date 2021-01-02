@@ -3,6 +3,7 @@ import { Any } from './any';
 import { AvoidWrapperTypes } from './avoid-wrapper-types';
 import { CodeGen } from './code-gen';
 import { ConfigurationOptions } from './configuration-options';
+import { ExcessPropertyChecking } from './excess-property-checking';
 import { JsAndTsRelationship } from './js-and-ts-relationship';
 import { Spaces } from './spaces';
 import { StructuralTyping } from './structural-typing';
@@ -21,5 +22,6 @@ export const EffectiveTypeScript = () => (
         <Spaces />
         <AvoidTypeAssertions />
         <AvoidWrapperTypes />
+        <ExcessPropertyChecking />
     </article>
 );
