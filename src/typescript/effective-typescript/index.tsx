@@ -8,6 +8,8 @@ import { JsAndTsRelationship } from './js-and-ts-relationship';
 import { Spaces } from './spaces';
 import { StructuralTyping } from './structural-typing';
 import { AvoidTypeAssertions } from './type-assertions';
+import { TypeToFunctionExpression } from './type-to-function-expression';
+import { TypeVsInterface } from './type-vs-interface';
 import { TypesAsSetsOfValues } from './types-as-sets-of-values';
 import { UseYourEditor } from './use-your-editor';
 export const EffectiveTypeScript = () => (
@@ -23,5 +25,7 @@ export const EffectiveTypeScript = () => (
         <AvoidTypeAssertions />
         <AvoidWrapperTypes />
         <ExcessPropertyChecking />
+        <TypeToFunctionExpression />
+        <TypeVsInterface />
     </article>
 );
