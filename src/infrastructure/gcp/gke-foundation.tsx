@@ -9,6 +9,8 @@ const billingMd = require("./markdowns/gke-foundations/3-billing.md");
 const containersMd = require("./markdowns/gke-foundations/4-intro-to-containers.md");
 const containerImagesMd = require("./markdowns/gke-foundations/5-container-images.md");
 const k8sMd = require("./markdowns/gke-foundations/6-intro-to-k8s.md");
+const gkeMd = require("./markdowns/gke-foundations/7-intro-to-gke.md");
+const computeOptionsMd = require("./markdowns/gke-foundations/8-compute-options.md");
 
 export const GkeFoundations = () => (
     <article>
@@ -30,6 +32,12 @@ export const GkeFoundations = () => (
             </div>
             <div style={{padding: '1rem 2rem 0rem 2rem'}}>
                 <Markdown>{k8sMd}</Markdown>
+            </div>
+            <div style={{padding: '1rem 2rem 0rem 2rem'}}>
+                <Markdown>{gkeMd}</Markdown>
+            </div>
+            <div style={{padding: '1rem 2rem 0rem 2rem'}}>
+                <Markdown>{computeOptionsMd}</Markdown>
             </div>
         </ExpandableSection>
     </article>
