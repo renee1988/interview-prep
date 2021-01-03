@@ -26,6 +26,8 @@ const mds = [
     require("./markdowns/gke-foundations/9-k8s-concepts.md"),
     require("./markdowns/gke-foundations/10-k8s-control-plane.md"),
     require("./markdowns/gke-foundations/11-gke-concepts.md"),
+    require("./markdowns/gke-foundations/12-k8s-object-management.md"),
+    require("./markdowns/gke-foundations/13-advanced-objects-service.md"),
 ];
 
 export const GkeFoundations = () => (
