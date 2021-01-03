@@ -12,6 +12,7 @@ const k8sMd = require("./markdowns/gke-foundations/6-intro-to-k8s.md");
 const gkeMd = require("./markdowns/gke-foundations/7-intro-to-gke.md");
 const computeOptionsMd = require("./markdowns/gke-foundations/8-compute-options.md");
 const k8sComponentsMd = require("./markdowns/gke-foundations/9-k8s-concepts.md");
+const k8sControlPlaneMd = require("./markdowns/gke-foundations/10-k8s-control-plane.md");
 
 export const GkeFoundations = () => (
     <article>
@@ -42,6 +43,9 @@ export const GkeFoundations = () => (
             </div>
             <div style={{padding: '1rem 2rem 0rem 2rem'}}>
                 <Markdown>{k8sComponentsMd}</Markdown>
+            </div>
+            <div style={{padding: '1rem 2rem 0rem 2rem'}}>
+                <Markdown>{k8sControlPlaneMd}</Markdown>
             </div>
         </ExpandableSection>
     </article>
