@@ -8,6 +8,7 @@ const resourceManagementMd = require("./markdowns/gke-foundations/2-resource-man
 const billingMd = require("./markdowns/gke-foundations/3-billing.md");
 const containersMd = require("./markdowns/gke-foundations/4-intro-to-containers.md");
 const containerImagesMd = require("./markdowns/gke-foundations/5-container-images.md");
+const k8sMd = require("./markdowns/gke-foundations/6-intro-to-k8s.md");
 
 export const GkeFoundations = () => (
     <article>
@@ -26,6 +27,9 @@ export const GkeFoundations = () => (
             </div>
             <div style={{padding: '1rem 2rem 0rem 2rem'}}>
                 <Markdown>{containerImagesMd}</Markdown>
+            </div>
+            <div style={{padding: '1rem 2rem 0rem 2rem'}}>
+                <Markdown>{k8sMd}</Markdown>
             </div>
         </ExpandableSection>
     </article>
