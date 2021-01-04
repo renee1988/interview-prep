@@ -5,6 +5,7 @@ import {ExpandableSection} from '../../components/expandable-section';
 
 const mds = [
     require("./markdowns/networking/1-vpc.md"),
+    require("./markdowns/networking/2-multiple-network-interfaces.md"),
 ];
 
 export const Networking = () => (
