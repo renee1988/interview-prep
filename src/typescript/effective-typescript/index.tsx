@@ -1,5 +1,6 @@
 import React from 'react';
 import { Any } from './any';
+import { AvoidRepeating } from './avoid-repeating';
 import { AvoidWrapperTypes } from './avoid-wrapper-types';
 import { CodeGen } from './code-gen';
 import { ConfigurationOptions } from './configuration-options';
@@ -27,5 +28,6 @@ export const EffectiveTypeScript = () => (
         <ExcessPropertyChecking />
         <TypeToFunctionExpression />
         <TypeVsInterface />
+        <AvoidRepeating />
     </article>
 );
