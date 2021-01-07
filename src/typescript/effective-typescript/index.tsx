@@ -5,6 +5,7 @@ import { AvoidWrapperTypes } from './avoid-wrapper-types';
 import { CodeGen } from './code-gen';
 import { ConfigurationOptions } from './configuration-options';
 import { ExcessPropertyChecking } from './excess-property-checking';
+import { IndexSignature } from './index-signature';
 import { JsAndTsRelationship } from './js-and-ts-relationship';
 import { Spaces } from './spaces';
 import { StructuralTyping } from './structural-typing';
@@ -29,5 +30,6 @@ export const EffectiveTypeScript = () => (
         <TypeToFunctionExpression />
         <TypeVsInterface />
         <AvoidRepeating />
+        <IndexSignature />
     </article>
 );
