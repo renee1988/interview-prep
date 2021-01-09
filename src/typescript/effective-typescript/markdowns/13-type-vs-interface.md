@@ -17,7 +17,8 @@ interface IState = {
 * You can use an index signature with both `interface` and `type`
   <pre>
   type TDict = {[key: string]: string};
-  interface IDict { [key: string]: string; }
+  interface IDict { [key: string]: string;
+  }
   </pre>
 * You can define function type with either `interface` or `type`
   <pre>
