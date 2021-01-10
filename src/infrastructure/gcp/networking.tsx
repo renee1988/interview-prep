@@ -9,6 +9,7 @@ const mds = [
     require("./markdowns/networking/3-access-controls.md"),
     require("./markdowns/networking/4-shared-vpc.md"),
     require("./markdowns/networking/5-vpc-peering.md"),
+    require("./markdowns/networking/6-load-balancing-overview.md"),
 ];
 
 export const Networking = () => (
