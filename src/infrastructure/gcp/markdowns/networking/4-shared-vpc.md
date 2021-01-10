@@ -42,4 +42,16 @@ Required administrative roles:
 * Service project admin
   * Network user
   * Control over service project resources: compute instance admin, project owner
-  * Create resources in shared VPC: VM instances, instance templates and groups, static internal IP, load balancer.
+  * Create resources in shared VPC: VM instances, instance templates and groups, static internal IP, load balancers
+
+<img style="width:80%" src="./shared-vpc-network.jpg">
+
+* The shared VPC admin which was nominated by organization admin, configures the Web App Server Project as the host project with subnet level permissions.
+  * Doing so allows the shared VPC admin to selectively share subnets from the VPC network.
+* The shared VPC admin attaches the 3 service projects to the host project and gives each project owner the `networkUser` role for the corresponding subnets.
+* Each service project owner then creates VM instances from the service project in the shared subnets.
+  * Billing for these VM instances is tributed to the projects from where the resources are created, in this case, it is the service projects.
+* The shared VPC adim has full control over the resources in the host project, including adminitration of shared VPC network.
+  * The shared VPC admin can delegate the network admin and security admin roles for the host project.
+
+Overall shared VPC is a centralized approach to multi-project networking because security and network policy are crecinates a single VPC network.
