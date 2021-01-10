@@ -55,3 +55,22 @@ Required administrative roles:
   * The shared VPC admin can delegate the network admin and security admin roles for the host project.
 
 Overall shared VPC is a centralized approach to multi-project networking because security and network policy are crecinates a single VPC network.
+
+### Useful GCP command for shared vpc network
+
+```
+# Get the host project for a shared VPC network
+gcloud compute shared-vpc get-host-project <service_project_id>
+# List all the available subnets to use to create VM instance in
+gcloud compute networks subnets list-usable --project <host_project_id>
+# Describe a subnet, you can use the self link of the subnet to create
+# a VM instance.
+gcloud compute networks subnets describe <subnet_name>
+# List all the firewall rules in the host project
+gcloud compute firewall-rules list --project <host_project_id>
+# Create a VM instance in the desired subnet
+gcloud compute instances create <vm_instance_name> \
+  --project <service_project_id> \
+  --zone <zone_id> \
+  --subnet <self_link_of_the_desired_subnet>
+```
