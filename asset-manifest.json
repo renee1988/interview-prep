@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/interview-prep/static/css/main.647ead8c.chunk.css",
-    "main.js": "/interview-prep/static/js/main.c02c0a67.chunk.js",
-    "main.js.map": "/interview-prep/static/js/main.c02c0a67.chunk.js.map",
+    "main.js": "/interview-prep/static/js/main.b62058f4.chunk.js",
+    "main.js.map": "/interview-prep/static/js/main.b62058f4.chunk.js.map",
     "runtime-main.js": "/interview-prep/static/js/runtime-main.5c3ca30f.js",
     "runtime-main.js.map": "/interview-prep/static/js/runtime-main.5c3ca30f.js.map",
-    "static/js/2.483389b4.chunk.js": "/interview-prep/static/js/2.483389b4.chunk.js",
-    "static/js/2.483389b4.chunk.js.map": "/interview-prep/static/js/2.483389b4.chunk.js.map",
+    "static/js/2.23b13f42.chunk.js": "/interview-prep/static/js/2.23b13f42.chunk.js",
+    "static/js/2.23b13f42.chunk.js.map": "/interview-prep/static/js/2.23b13f42.chunk.js.map",
     "index.html": "/interview-prep/index.html",
-    "precache-manifest.64da484e87bcf3e4c22a5ec150718251.js": "/interview-prep/precache-manifest.64da484e87bcf3e4c22a5ec150718251.js",
+    "precache-manifest.a8c9a6d6315b82d7df5684e7aa8f3e5e.js": "/interview-prep/precache-manifest.a8c9a6d6315b82d7df5684e7aa8f3e5e.js",
     "service-worker.js": "/interview-prep/service-worker.js",
     "static/css/main.647ead8c.chunk.css.map": "/interview-prep/static/css/main.647ead8c.chunk.css.map",
-    "static/js/2.483389b4.chunk.js.LICENSE.txt": "/interview-prep/static/js/2.483389b4.chunk.js.LICENSE.txt",
+    "static/js/2.23b13f42.chunk.js.LICENSE.txt": "/interview-prep/static/js/2.23b13f42.chunk.js.LICENSE.txt",
     "static/media/effective-type-item-1-1.jpg": "/interview-prep/static/media/effective-type-item-1-1.0d199723.jpg",
     "static/media/iam-1.jpg": "/interview-prep/static/media/iam-1.ebc1d320.jpg",
     "static/media/promise-doodle.jpg": "/interview-prep/static/media/promise-doodle.e82778df.jpg",
+    "static/media/shared-vpc-network.jpg": "/interview-prep/static/media/shared-vpc-network.5a2cd101.jpg",
     "static/media/thinking-reactively-1.jpg": "/interview-prep/static/media/thinking-reactively-1.5d4d3e7b.jpg",
     "static/media/vpc-1.jpg": "/interview-prep/static/media/vpc-1.02c7d439.jpg",
     "static/media/vpc-2.jpg": "/interview-prep/static/media/vpc-2.d644e78b.jpg",
@@ -22,8 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.5c3ca30f.js",
-    "static/js/2.483389b4.chunk.js",
+    "static/js/2.23b13f42.chunk.js",
     "static/css/main.647ead8c.chunk.css",
-    "static/js/main.c02c0a67.chunk.js"
+    "static/js/main.b62058f4.chunk.js"
   ]
 }
