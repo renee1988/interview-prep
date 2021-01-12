@@ -12,6 +12,7 @@ const mds = [
     require("./markdowns/networking/6-load-balancing-overview.md"),
     require("./markdowns/networking/7-managed-instance-groups.md"),
     require("./markdowns/networking/8-https-load-balancer.md"),
+    require("./markdowns/networking/9-cloud-armor.md"),
 ];
 
 export const Networking = () => (
