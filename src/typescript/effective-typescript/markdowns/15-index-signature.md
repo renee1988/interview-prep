@@ -23,7 +23,7 @@ function parseCSV(input: string): {[columnName: string]: string}[] {
         rowStr.split('.').forEach((cell, i) => {
             row[header[i]] = cell;
         });
-        return rowl;
+        return row;
     });
 }
 ```
