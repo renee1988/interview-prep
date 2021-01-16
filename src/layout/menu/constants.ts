@@ -77,6 +77,10 @@ const effectiveJavaMenu: Array<MenuConfig> = [
     {
         displayName: 'Generics',
         route: 'generics'
+    },
+    {
+        displayName: 'Concurrency',
+        route: 'concurrency'
     }
 ];
 

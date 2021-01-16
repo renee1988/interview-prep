@@ -19,4 +19,3 @@ Regardless of whether your application is deployed in GCP or in a hybrid of mult
 5. Configure an HTTP load balancer with IPv4 and IPv6
 6. Stress test an HTTP load balancer
 7. Deny an IP address to restrict access to an HTTP load balancer
-

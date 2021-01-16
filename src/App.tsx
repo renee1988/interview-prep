@@ -18,6 +18,7 @@ import { EffectiveTypeScript } from './typescript/effective-typescript';
 import { WebSecurity } from './web-fundamentals/web-security';
 import { WebPerformance } from './web-fundamentals/web-performance';
 import { HTTP2 } from './web-fundamentals/http2';
+import { Concurrency } from './effective-java/concurrency';
 
 function App() {
   return (
@@ -60,6 +61,11 @@ function App() {
               exact
               path="/interview-prep/java-best-practices/classes-and-interfaces"
               component={ClassesAndInterfaces}
+            />
+            <Route
+              exact
+              path="/interview-prep/java-best-practices/concurrency"
+              component={Concurrency}
             />
             <Route
               exact

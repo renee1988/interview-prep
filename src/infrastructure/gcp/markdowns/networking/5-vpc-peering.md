@@ -77,4 +77,7 @@ VPC network peering does not incur the network latency, security and cost drawba
 * Shared VPC is a *centralized* approach to multi-project networking, because security and network policy occur in a single designated VPC
 * VPC network peering is a *decentralized* approach, because each of the VPC networks can remain under the control of separate administrator groups, and maintains its own global firewall and routing tables.
 
+### Some notes
 In GCP, you can peer with a shared VPC network. It is also possible to peer two shared VPC networks.
+
+Compute Engine internal DNS names created in a network are not accessible to peered networks. The IP address of the VM should be used to reach the VM instances in peered network.
