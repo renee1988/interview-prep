@@ -19,6 +19,7 @@ import { WebSecurity } from './web-fundamentals/web-security';
 import { WebPerformance } from './web-fundamentals/web-performance';
 import { HTTP2 } from './web-fundamentals/http2';
 import { Concurrency } from './effective-java/concurrency';
+import { Home } from './Home';
 
 function App() {
   return (
@@ -27,6 +28,11 @@ function App() {
         <Menu menus={MENUS} />
         <div className="markdown-container">
           <Switch>
+            <Route
+              exact
+              path="/interview-prep"
+              component={Home}
+            />
             <Route
               exact
               path="/interview-prep/algorithms"
