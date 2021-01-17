@@ -6,6 +6,7 @@ import { CodeGen } from './code-gen';
 import { ConfigurationOptions } from './configuration-options';
 import { ExcessPropertyChecking } from './excess-property-checking';
 import { IndexSignature } from './index-signature';
+import { InferableTypes } from './inferable-types';
 import { JsAndTsRelationship } from './js-and-ts-relationship';
 import { KeepValueInSync } from './keep-value-in-sync';
 import { ReadonlyModifier } from './readonly';
@@ -35,5 +36,6 @@ export const EffectiveTypeScript = () => (
         <IndexSignature />
         <ReadonlyModifier />
         <KeepValueInSync />
+        <InferableTypes />
     </article>
 );
