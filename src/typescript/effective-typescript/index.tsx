@@ -7,6 +7,7 @@ import { ConfigurationOptions } from './configuration-options';
 import { ExcessPropertyChecking } from './excess-property-checking';
 import { IndexSignature } from './index-signature';
 import { JsAndTsRelationship } from './js-and-ts-relationship';
+import { ReadonlyModifier } from './readonly';
 import { Spaces } from './spaces';
 import { StructuralTyping } from './structural-typing';
 import { AvoidTypeAssertions } from './type-assertions';
@@ -31,5 +32,6 @@ export const EffectiveTypeScript = () => (
         <TypeVsInterface />
         <AvoidRepeating />
         <IndexSignature />
+        <ReadonlyModifier />
     </article>
 );
