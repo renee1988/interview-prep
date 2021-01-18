@@ -22,12 +22,14 @@ import { TypesAsSetsOfValues } from './types-as-sets-of-values';
 import { UseYourEditor } from './use-your-editor';
 export const EffectiveTypeScript = () => (
     <article style={{display: 'grid', rowGap: '1.5rem'}}>
+        <h1>Get to know TypeScript</h1>
         <JsAndTsRelationship />
         <ConfigurationOptions />
         <CodeGen />
         <StructuralTyping />
         <Any />
         <UseYourEditor />
+        <h1>Type System</h1>
         <TypesAsSetsOfValues />
         <Spaces />
         <AvoidTypeAssertions />
@@ -39,6 +41,7 @@ export const EffectiveTypeScript = () => (
         <IndexSignature />
         <ReadonlyModifier />
         <KeepValueInSync />
+        <h1>Type Inference</h1>
         <InferableTypes />
         <DifferentVariablesForDifferentTypes />
         <TypeWidening />
