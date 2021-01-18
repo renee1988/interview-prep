@@ -14,6 +14,7 @@ import { ReadonlyModifier } from './readonly';
 import { Spaces } from './spaces';
 import { StructuralTyping } from './structural-typing';
 import { AvoidTypeAssertions } from './type-assertions';
+import { TypeNarrowing } from './type-narrowing';
 import { TypeToFunctionExpression } from './type-to-function-expression';
 import { TypeVsInterface } from './type-vs-interface';
 import { TypeWidening } from './type-widening';
@@ -41,5 +42,6 @@ export const EffectiveTypeScript = () => (
         <InferableTypes />
         <DifferentVariablesForDifferentTypes />
         <TypeWidening />
+        <TypeNarrowing />
     </article>
 );
