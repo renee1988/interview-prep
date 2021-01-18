@@ -19,6 +19,7 @@ import { TypeToFunctionExpression } from './type-to-function-expression';
 import { TypeVsInterface } from './type-vs-interface';
 import { TypeWidening } from './type-widening';
 import { TypesAsSetsOfValues } from './types-as-sets-of-values';
+import { UseOfAliases } from './use-of-aliases';
 import { UseYourEditor } from './use-your-editor';
 export const EffectiveTypeScript = () => (
     <article style={{display: 'grid', rowGap: '1.5rem'}}>
@@ -46,5 +47,6 @@ export const EffectiveTypeScript = () => (
         <DifferentVariablesForDifferentTypes />
         <TypeWidening />
         <TypeNarrowing />
+        <UseOfAliases />
     </article>
 );
