@@ -4,6 +4,7 @@ import { AvoidRepeating } from './avoid-repeating';
 import { AvoidWrapperTypes } from './avoid-wrapper-types';
 import { CodeGen } from './code-gen';
 import { ConfigurationOptions } from './configuration-options';
+import { DifferentVariablesForDifferentTypes } from './different-vars-for-different-types';
 import { ExcessPropertyChecking } from './excess-property-checking';
 import { IndexSignature } from './index-signature';
 import { InferableTypes } from './inferable-types';
@@ -37,5 +38,6 @@ export const EffectiveTypeScript = () => (
         <ReadonlyModifier />
         <KeepValueInSync />
         <InferableTypes />
+        <DifferentVariablesForDifferentTypes />
     </article>
 );
