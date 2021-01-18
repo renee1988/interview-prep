@@ -16,6 +16,7 @@ import { StructuralTyping } from './structural-typing';
 import { AvoidTypeAssertions } from './type-assertions';
 import { TypeToFunctionExpression } from './type-to-function-expression';
 import { TypeVsInterface } from './type-vs-interface';
+import { TypeWidening } from './type-widening';
 import { TypesAsSetsOfValues } from './types-as-sets-of-values';
 import { UseYourEditor } from './use-your-editor';
 export const EffectiveTypeScript = () => (
@@ -39,5 +40,6 @@ export const EffectiveTypeScript = () => (
         <KeepValueInSync />
         <InferableTypes />
         <DifferentVariablesForDifferentTypes />
+        <TypeWidening />
     </article>
 );
